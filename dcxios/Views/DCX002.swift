@@ -1,17 +1,18 @@
+// DCX002.swift
+
 import SwiftUI
 
-struct ContentView: View {
+struct DCX002: View {
     @EnvironmentObject var model: ModelData
     
     var body: some View {
-        DCX001()
-            .environmentObject(model)
+        Text(model.greeting)
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct DCX002_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        DCX002()
             .environmentObject(ModelData())
     }
 }

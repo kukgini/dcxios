@@ -12,7 +12,7 @@ struct DCX001: View {
                 .foregroundColor(.accentColor)
             Text(model.greeting)
             Button(action: {
-                RestAPI.post(
+                API.get(
                     url: "https://httpbin.org/get",
                     complition: { result in
                         switch result {
@@ -26,8 +26,9 @@ struct DCX001: View {
                 Text("RestAPI GET Test")
             }
             Button(action: {
-                RestAPI.post(
+                API.post(
                     url: "https://httpbin.org/post",
+                    data: ["hello":"world"],
                     complition: { result in
                         switch result {
                         case .success(let json):

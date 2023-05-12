@@ -11,6 +11,20 @@ struct DCX001: View {
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
             Text(model.greeting)
+            Button(action: {
+                RestAPI.post(
+                    url: "https://httpbin.org/get",
+                    complition: { response in
+                        switch response {
+                        case .success(let json):
+                            print("\(json)")
+                        case .failure(let error):
+                            print("\(error.localizedDescription)")
+                        }
+                    })
+            }) {
+                Text("RestAPI Test")
+            }
         }
         .padding()
     }

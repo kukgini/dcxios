@@ -14,8 +14,8 @@ struct DCX001: View {
             Button(action: {
                 RestAPI.post(
                     url: "https://httpbin.org/get",
-                    complition: { response in
-                        switch response {
+                    complition: { result in
+                        switch result {
                         case .success(let json):
                             print("\(json)")
                         case .failure(let error):
@@ -23,7 +23,21 @@ struct DCX001: View {
                         }
                     })
             }) {
-                Text("RestAPI Test")
+                Text("RestAPI GET Test")
+            }
+            Button(action: {
+                RestAPI.post(
+                    url: "https://httpbin.org/post",
+                    complition: { result in
+                        switch result {
+                        case .success(let json):
+                            print("\(json)")
+                        case .failure(let error):
+                            print("\(error.localizedDescription)")
+                        }
+                    })
+            }) {
+                Text("RestAPI POST Test")
             }
         }
         .padding()

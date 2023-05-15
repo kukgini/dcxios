@@ -9,30 +9,30 @@ public struct API {
         "Accept": "application/json"
     ] as HTTPHeaders
     
-    static func get(url: String, data: [String:Any]? = nil, complition: @escaping(Result<[String:Any],Error>) -> Void) {
+    static func get(url: String, data: [String:Any]? = nil, complition: @escaping(Result<JSON,Error>) -> Void) {
         let encoding = JSONEncoding.default
         let headers = defaultApiHeaders
         AF.request(url, method: .get, encoding: encoding, headers: headers)
             .validate(statusCode: 200..<300)
-            .responseJSON { response in
+            .response { response in
                 switch response.result {
                 case .success(let body):
-                    complition(.success(body as! [String:Any]))
+                    complition(.success(JSON(body ?? "{}")))
                 case .failure(let error):
                     complition(.failure(error))
                 }
             }
     }
     
-    static func post(url: String, data: [String:Any]? = nil, complition: @escaping(Result<[String:Any],Error>) -> Void) {
+    static func post(url: String, data: [String:Any]? = nil, complition: @escaping(Result<JSON,Error>) -> Void) {
         let encoding = JSONEncoding.default
         let headers = defaultApiHeaders
         AF.request(url, method: .post, parameters: data, encoding: encoding, headers: headers)
             .validate(statusCode: 200..<300)
-            .responseJSON { response in
+            .response { response in
                 switch response.result {
                 case .success(let body):
-                    complition(.success(body as! [String:Any]))
+                    complition(.success(JSON(body ?? "{}")))
                 case .failure(let error):
                     complition(.failure(error))
                 }

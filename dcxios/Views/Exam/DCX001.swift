@@ -33,7 +33,7 @@ struct DCX001: View {
                     complition: { result in
                         switch result {
                         case .success(let json):
-                            print("\(json)")
+                            print("Hello \(json["json"]["hello"].stringValue)!")
                         case .failure(let error):
                             print("\(error.localizedDescription)")
                         }

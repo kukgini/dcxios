@@ -6,7 +6,28 @@ struct DCX002: View {
     @EnvironmentObject var model: ViewModel
     
     var body: some View {
-        Text(model.greeting)
+        NavigationView {
+            List {
+                Text(model.greeting)
+            }
+            .navigationBarTitle("Sub View")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarItems(
+                leading: DCX002BackButton(),
+                trailing: Text("B"))
+        }
+    }
+}
+
+struct DCX002BackButton: View {
+    @EnvironmentObject var model: ViewModel
+    
+    var body: some View {
+        Button(action: {
+            model.currentView = .dcx001
+        }) {
+            Text("<")
+        }
     }
 }
 

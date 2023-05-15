@@ -3,8 +3,14 @@
 import Foundation
 import Combine
 
+public enum DCXView {
+    case dcx001
+    case dcx002
+}
+
 final class ViewModel: ObservableObject {
     @Published var greeting = "Hello from Environment!"
+    @Published var currentView: DCXView = .dcx001
 }
 
 func load<T: Decodable>(_ filename: String) -> T {

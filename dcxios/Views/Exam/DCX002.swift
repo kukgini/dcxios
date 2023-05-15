@@ -13,20 +13,8 @@ struct DCX002: View {
             .navigationBarTitle("Sub View")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(
-                leading: DCX002BackButton(),
+                leading: ViewChangeButton(label: "<", view: .dcx001),
                 trailing: Text("B"))
-        }
-    }
-}
-
-struct DCX002BackButton: View {
-    @EnvironmentObject var model: ViewModel
-    
-    var body: some View {
-        Button(action: {
-            model.currentView = .dcx001
-        }) {
-            Text("<")
         }
     }
 }

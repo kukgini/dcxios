@@ -11,7 +11,7 @@ struct DCX001: View {
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
             Text(model.greeting)
-            DCX001GoButton(label: "Go DCX002 View")
+            ViewChangeButton(label: "Go DCX002 View", view: .dcx002)
             Button(action: {
                 API.get(
                     url: "https://httpbin.org/get",
@@ -43,19 +43,6 @@ struct DCX001: View {
             }
         }
         .padding()
-    }
-}
-
-struct DCX001GoButton: View {
-    @EnvironmentObject var model: ViewModel
-    var label: String
-    
-    var body: some View {
-        Button(action: {
-            model.currentView = .dcx002
-        }) {
-            Text(label)
-        }
     }
 }
 

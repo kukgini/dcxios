@@ -2,7 +2,7 @@ import SwiftUI
 
 @main
 struct dcxiosApp: App {
-    @StateObject private var model = ModelData()
+    @StateObject private var model = ViewModel()
     
     var body: some Scene {
         WindowGroup {

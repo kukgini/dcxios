@@ -3,7 +3,7 @@
 import SwiftUI
 
 struct DCX001: View {
-    @EnvironmentObject var model: ModelData
+    @EnvironmentObject var model: ViewModel
     
     var body: some View {
         VStack {
@@ -48,6 +48,6 @@ struct DCX001: View {
 struct DCX001_Previews: PreviewProvider {
     static var previews: some View {
         DCX001()
-            .environmentObject(ModelData())
+            .environmentObject(ViewModel())
     }
 }

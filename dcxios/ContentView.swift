@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var model: ModelData
+    @EnvironmentObject var model: ViewModel
     
     var body: some View {
         DCX001()
@@ -12,6 +12,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(ModelData())
+            .environmentObject(ViewModel())
     }
 }

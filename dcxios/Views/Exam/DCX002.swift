@@ -3,7 +3,7 @@
 import SwiftUI
 
 struct DCX002: View {
-    @EnvironmentObject var model: ModelData
+    @EnvironmentObject var model: ViewModel
     
     var body: some View {
         Text(model.greeting)
@@ -13,6 +13,6 @@ struct DCX002: View {
 struct DCX002_Previews: PreviewProvider {
     static var previews: some View {
         DCX002()
-            .environmentObject(ModelData())
+            .environmentObject(ViewModel())
     }
 }

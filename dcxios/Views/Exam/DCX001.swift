@@ -4,6 +4,7 @@ import SwiftUI
 
 struct DCX001: View {
     @EnvironmentObject var model: ViewModel
+    @State var isExpanded: Bool
     
     var body: some View {
         VStack {
@@ -40,6 +41,22 @@ struct DCX001: View {
                     })
             }) {
                 Text("RestAPI POST Test")
+            }
+            Spacer()
+            CustomDisclosureGroup(isExpanded: $isExpanded) {
+                isExpanded.toggle()
+            } prompt: {
+                HStack(spacing: 0) {
+                    Text("How to open an account in your application?")
+                    Spacer()
+                    Text(">")
+                        .fontWeight(.bold)
+                        .rotationEffect(isExpanded ? Angle(degrees: 90) : .zero)
+                }
+                .padding(.horizontal, 20)
+            } expandedView: {
+                Text("you can open an account by choosing between gmail or ICloud when opening the application")
+                    .font(.system(size: 16, weight: .semibold, design: .monospaced))
             }
         }
         .padding()

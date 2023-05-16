@@ -10,6 +10,7 @@
 		13D3BFD0DA16B4720889AB76 /* Pods_dcxios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 798F62117391BDFB2AB943D5 /* Pods_dcxios.framework */; };
 		77A3BACF2A13332700BC2DFF /* CustomDisclosureGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3BACE2A13332700BC2DFF /* CustomDisclosureGroup.swift */; };
 		77A3BAD42A13347E00BC2DFF /* mockdata.json in Resources */ = {isa = PBXBuildFile; fileRef = 77A3BAD32A13347E00BC2DFF /* mockdata.json */; };
+		77A3BAD62A13B15700BC2DFF /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3BAD52A13B15700BC2DFF /* ListItemView.swift */; };
 		914D7CCB2A0CA2E900ACDA98 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914D7CCA2A0CA2E900ACDA98 /* ViewModel.swift */; };
 		914D7CCD2A0CA3E600ACDA98 /* DCX001.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914D7CCC2A0CA3E600ACDA98 /* DCX001.swift */; };
 		914D7CCF2A0CA3F400ACDA98 /* DCX002.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914D7CCE2A0CA3F400ACDA98 /* DCX002.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		77A3BACE2A13332700BC2DFF /* CustomDisclosureGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDisclosureGroup.swift; sourceTree = "<group>"; };
 		77A3BAD32A13347E00BC2DFF /* mockdata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mockdata.json; sourceTree = "<group>"; };
+		77A3BAD52A13B15700BC2DFF /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
 		798F62117391BDFB2AB943D5 /* Pods_dcxios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dcxios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		914D7CCA2A0CA2E900ACDA98 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		914D7CCC2A0CA3E600ACDA98 /* DCX001.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCX001.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				91998EF92A11E8B9003C09BE /* ViewChangeButton.swift */,
 				77A3BACE2A13332700BC2DFF /* CustomDisclosureGroup.swift */,
 				914D7CD42A0CA6D700ACDA98 /* FavoriteButton.swift */,
+				77A3BAD52A13B15700BC2DFF /* ListItemView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				91B9586E2A08BC7800C7F75C /* dcxiosApp.swift in Sources */,
 				914D7CD52A0CA6D700ACDA98 /* FavoriteButton.swift in Sources */,
 				77A3BACF2A13332700BC2DFF /* CustomDisclosureGroup.swift in Sources */,
+				77A3BAD62A13B15700BC2DFF /* ListItemView.swift in Sources */,
 				914D7CCB2A0CA2E900ACDA98 /* ViewModel.swift in Sources */,
 				91E77FD52A0E1EBC0039AD1E /* API.swift in Sources */,
 				91998EFA2A11E8B9003C09BE /* ViewChangeButton.swift in Sources */,

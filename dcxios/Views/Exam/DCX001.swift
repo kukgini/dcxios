@@ -12,6 +12,18 @@ struct DCX001: View {
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
             Text(model.greeting)
+            
+            List {
+                ForEach(1..<20) { index in
+                    if index % 2 == 0 {
+                        ListItemView(alignment: .right, title: "Title \(index)", description: "BlaBla... \(index)")
+                    } else {
+                        ListItemView(alignment: .left, title: "Title \(index)", description: "BlaBla... \(index)")
+                    }
+                }
+            }
+            .listStyle(.plain)
+            
             ViewChangeButton(label: "Go DCX002 View", view: .dcx002)
             Button(action: {
                 API.get(

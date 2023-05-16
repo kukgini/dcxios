@@ -5,7 +5,7 @@ struct ContentView: View {
     
     var body: some View {
         switch model.currentView {
-        case .dcx001: DCX001()
+        case .dcx001: DCX001(isExpanded: true)
         case .dcx002: DCX002()
         }
     }

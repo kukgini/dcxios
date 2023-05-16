@@ -67,7 +67,6 @@
 			children = (
 				91998EF82A11E88E003C09BE /* Component */,
 				914D7CD12A0CA68600ACDA98 /* Exam */,
-				914D7CD02A0CA67800ACDA98 /* Examples */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -78,14 +77,6 @@
 				914D7CCA2A0CA2E900ACDA98 /* ViewModel.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		914D7CD02A0CA67800ACDA98 /* Examples */ = {
-			isa = PBXGroup;
-			children = (
-				914D7CD42A0CA6D700ACDA98 /* FavoriteButton.swift */,
-			);
-			path = Examples;
 			sourceTree = "<group>";
 		};
 		914D7CD12A0CA68600ACDA98 /* Exam */ = {
@@ -102,6 +93,7 @@
 			children = (
 				91998EF92A11E8B9003C09BE /* ViewChangeButton.swift */,
 				77A3BACE2A13332700BC2DFF /* CustomDisclosureGroup.swift */,
+				914D7CD42A0CA6D700ACDA98 /* FavoriteButton.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";

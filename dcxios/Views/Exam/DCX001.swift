@@ -42,6 +42,7 @@ struct DCX001: View {
             }) {
                 Text("RestAPI POST Test")
             }
+            FavoriteButton(isSet: $isExpanded)
             Spacer()
             CustomDisclosureGroup(isExpanded: $isExpanded) {
                 isExpanded.toggle()

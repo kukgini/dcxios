@@ -65,7 +65,7 @@ struct DCX001: View {
 
 struct DCX001_Previews: PreviewProvider {
     static var previews: some View {
-        DCX001()
+        DCX001(isExpanded: true)
             .environmentObject(ViewModel())
     }
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		13D3BFD0DA16B4720889AB76 /* Pods_dcxios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 798F62117391BDFB2AB943D5 /* Pods_dcxios.framework */; };
 		77A3BACF2A13332700BC2DFF /* CustomDisclosureGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3BACE2A13332700BC2DFF /* CustomDisclosureGroup.swift */; };
+		77A3BAD12A1333DD00BC2DFF /* mockdata.json in Resources */ = {isa = PBXBuildFile; fileRef = 77A3BAD02A1333DD00BC2DFF /* mockdata.json */; };
 		914D7CCB2A0CA2E900ACDA98 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914D7CCA2A0CA2E900ACDA98 /* ViewModel.swift */; };
 		914D7CCD2A0CA3E600ACDA98 /* DCX001.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914D7CCC2A0CA3E600ACDA98 /* DCX001.swift */; };
 		914D7CCF2A0CA3F400ACDA98 /* DCX002.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914D7CCE2A0CA3F400ACDA98 /* DCX002.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		77A3BACE2A13332700BC2DFF /* CustomDisclosureGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDisclosureGroup.swift; sourceTree = "<group>"; };
+		77A3BAD02A1333DD00BC2DFF /* mockdata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = mockdata.json; path = ../../../../../tct/dcxios/dcxios/Views/Component/mockdata.json; sourceTree = "<group>"; };
 		798F62117391BDFB2AB943D5 /* Pods_dcxios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dcxios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		914D7CCA2A0CA2E900ACDA98 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		914D7CCC2A0CA3E600ACDA98 /* DCX001.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCX001.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 		914D7CC92A0CA2CB00ACDA98 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				77A3BAD02A1333DD00BC2DFF /* mockdata.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77A3BAD12A1333DD00BC2DFF /* mockdata.json in Resources */,
 				91B958752A08BC7B00C7F75C /* Preview Assets.xcassets in Resources */,
 				91B958722A08BC7B00C7F75C /* Assets.xcassets in Resources */,
 			);

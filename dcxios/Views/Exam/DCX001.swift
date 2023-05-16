@@ -15,10 +15,10 @@ struct DCX001: View {
             
             List {
                 ForEach(1..<20) { index in
-                    if index % 2 == 0 {
-                        ListItemView(alignment: .right, title: "Title \(index)", description: "BlaBla... \(index)")
-                    } else {
+                    if index % 2 != 0 {
                         ListItemView(alignment: .left, title: "Title \(index)", description: "BlaBla... \(index)")
+                    } else {
+                        ListItemView(alignment: .right, title: "Title \(index)", description: "BlaBla... \(index)")
                     }
                 }
             }

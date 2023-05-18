@@ -1,3 +1,22 @@
 {
-
+    "shopList": [
+        {
+            "id": 1,
+            "category": "CK",
+            "name": "치킨플러스-마곡방화점",
+            "point": 4.3,
+            "review": 217,
+            "adFlag": "N",
+            "imageFile": "thumb1.png"
+        },
+        {
+            "id": 2,
+            "category": "PZ",
+            "name": "피자선생-마곡방화점",
+            "point": 4.8,
+            "review": 114,
+            "adFlag": "Y",
+            "imageFile": "thumb2.png"
+        }
+    ]
 }

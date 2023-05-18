@@ -2,15 +2,59 @@
 
 import Foundation
 import Combine
+import SwiftyJSON
 
 public enum DCXView {
     case dcx001
     case dcx002
 }
 
+public enum Category: String, Codable, Hashable {
+    case chicken = "CK"
+    case pizza = "PZ"
+    case bunsik = "SP"
+    case caffee = "CF"
+}
+
+public enum SortOption: String, Codable, Hashable {
+    case basic = "id"
+    case point = "point"
+    case review = "review"
+}
+
 final class ViewModel: ObservableObject {
     @Published var greeting = "Hello from Environment!"
     @Published var currentView: DCXView = .dcx001
+    @Published var shopList: [Shop]
+    @Published var shop: Shop?
+    @Published var filter: Category? = nil
+    @Published var sortOption: SortOption = .basic {
+        willSet(newOption) {
+            switch newOption {
+                case .basic:
+                    shopList.sort(by: {$0.id < $1.id})
+                case .point:
+                    shopList.sort(by: {$0.point < $1.point})
+                case .review:
+                    shopList.sort(by: {$0.review < $1.review})
+            }
+        }
+    }
+    
+    public init() {
+        self.shopList = load("mockdata.json")
+    }
+    
+    var adFlag: [Shop] {
+        shopList.filter { $0.adFlag == "Y" }
+    }
+
+    var categories: [String: [Shop]] {
+        Dictionary(
+            grouping: shopList,
+            by: { $0.category.rawValue }
+        )
+    }
 }
 
 func load<T: Decodable>(_ filename: String) -> T {
@@ -28,8 +72,9 @@ func load<T: Decodable>(_ filename: String) -> T {
     }
 
     do {
+        let json = JSON(data)
         let decoder = JSONDecoder()
-        return try decoder.decode(T.self, from: data)
+        return try decoder.decode(T.self, from: json["shopList"].rawData())
     } catch {
         fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
     }

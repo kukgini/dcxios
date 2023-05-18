@@ -2,9 +2,71 @@
 
 import SwiftUI
 
+struct SortButton: View {
+    var label: String
+    @Binding var option: SortOption
+    var key: SortOption
+    
+    var body: some View {
+        Button(action: {
+            option = key
+        }) {
+            Text(label)
+        }
+        .buttonStyle(BorderlessButtonStyle())
+    }
+}
+
+struct FilterButton: View {
+    var label: String
+    @Binding var filter: Category?
+    var category: Category?
+    
+    var body: some View {
+        Button(action: {
+            filter = category
+        }) {
+            Text(label)
+        }
+        .buttonStyle(BorderlessButtonStyle())
+    }
+}
+
+struct ShopView: View {
+    var shop: Shop
+    
+    var body: some View {
+        HStack {
+            Image(systemName: "star")
+                .imageScale(.large)
+            VStack (alignment: .leading){
+                HStack {
+                    Text(shop.name)
+                    if shop.adFlag == "Y" {
+                        Image(systemName: "star")
+                    }
+                }
+                HStack {
+                    Text(String(shop.point))
+                    Text(String(shop.review))
+                }
+            }
+        }
+    }
+}
+
 struct DCX001: View {
     @EnvironmentObject var model: ViewModel
     @State var isExpanded: Bool
+    
+    var filteredShops: [Shop] {
+        model.shopList.filter { shop in
+            guard let filter = model.filter else {
+                return true
+            }
+            return shop.category == filter
+        }
+    }
     
     var body: some View {
         VStack {
@@ -13,8 +75,36 @@ struct DCX001: View {
                 .foregroundColor(.accentColor)
             Text(model.greeting)
             
+            HStack {
+                FilterButton(label: "전체", filter: $model.filter, category: nil)
+                Spacer()
+                FilterButton(label: "치킨", filter: $model.filter, category: .chicken)
+                Spacer()
+                FilterButton(label: "피자", filter: $model.filter, category: .pizza)
+                Spacer()
+                FilterButton(label: "분식", filter: $model.filter, category: .bunsik)
+                Spacer()
+                FilterButton(label: "카페", filter: $model.filter, category: .caffee)
+            }
+            HStack {
+                SortButton(label: "기본 정렬순", option: $model.sortOption, key: .basic)
+                Spacer()
+                SortButton(label: "별점 높은순", option: $model.sortOption, key: .point)
+                Spacer()
+                SortButton(label: "리뷰 많은순", option: $model.sortOption, key: .review)
+            }
+            
             List {
-                ForEach(1..<20) { index in
+                ForEach(filteredShops) { shop in
+                    Button(action: {
+                        model.shop = shop
+                        model.currentView = .dcx002
+                    }) {
+                        ShopView(shop: shop)
+                    }
+                }
+                
+                ForEach(1..<10) { index in
                     if index % 2 != 0 {
                         ListItemView(alignment: .left, title: "Title \(index)", description: "BlaBla... \(index)")
                     } else {
@@ -24,7 +114,6 @@ struct DCX001: View {
             }
             .listStyle(.plain)
             
-            ViewChangeButton(label: "Go DCX002 View", view: .dcx002)
             Button(action: {
                 API.get(
                     url: "https://httpbin.org/get",

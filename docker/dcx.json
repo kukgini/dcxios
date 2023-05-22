@@ -1,0 +1,511 @@
+{
+    "source": "mockoon:1.12.0",
+    "data": [
+        {
+            "type": "environment",
+            "item": {
+                "uuid": "",
+                "lastMigration": 13,
+                "name": "DCX",
+                "endpointPrefix": "",
+                "latency": 0,
+                "port": 3300,
+                "routes": [
+                    {
+                        "uuid": "",
+                        "documentation": "",
+                        "method": "get",
+                        "endpoint": "dcx/health",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"status\": \"UP\"\n}",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "",
+                                "headers": [
+                                    {
+                                        "key": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "",
+                        "method": "get",
+                        "endpoint": "dcx/1/shopList",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "{\r\n  \"shopList\":[\r\n    {\r\n      \"id\" : 1,\r\n      \"category\" : \"CK\",\r\n      \"name\" : \"치킨플러스-마곡방화점\",\r\n      \"point\" : 4.3,\r\n      \"review\" : 217,\r\n      \"adFlag\" : \"N\",\r\n      \"imageFile\": \"thumb1.png\"\r\n    },\r\n    {\r\n      \"id\" : 2,\r\n      \"category\" : \"PZ\",\r\n      \"name\" : \"피자선생-마곡방화점\",\r\n      \"point\" : 4.8,\r\n      \"review\" : 114,\r\n      \"adFlag\" : \"Y\",\r\n      \"imageFile\": \"thumb2.png\"\r\n    },\r\n    {\r\n      \"id\" : 3,\r\n      \"category\" : \"PZ\",\r\n      \"name\" : \"미친피자-화곡점\",\r\n      \"point\" : 4.3,\r\n      \"review\" : 990,\r\n      \"adFlag\" : \"N\",\r\n      \"imageFile\": \"thumb3.png\"\r\n    },\r\n    {\r\n      \"id\" : 4,\r\n      \"category\" : \"CF\",\r\n      \"name\" : \"카페인중독-마곡점\",\r\n      \"point\" : 4.5,\r\n      \"review\" : 33,\r\n      \"adFlag\" : \"Y\",\r\n      \"imageFile\": \"thumb4.png\"\r\n    },\r\n    {\r\n      \"id\" : 5,\r\n      \"category\" : \"SF\",\r\n      \"name\" : \"데일리김밥\",\r\n      \"point\" : 4.8,\r\n      \"review\" : 316,\r\n      \"adFlag\" : \"N\",\r\n      \"imageFile\": \"thumb5.png\"\r\n    },\r\n    {\r\n      \"id\" : 6,\r\n      \"category\" : \"SF\",\r\n      \"name\" : \"신전떡볶이-서울공항점\",\r\n      \"point\" : 4.8,\r\n      \"review\" : 1562,\r\n      \"adFlag\" : \"N\",\r\n      \"imageFile\": \"thumb6.png\"\r\n    },\r\n    {\r\n      \"id\" : 7,\r\n      \"category\" : \"PZ\",\r\n      \"name\" : \"믹스쿡\",\r\n      \"point\" : 4.3,\r\n      \"review\" : 0,\r\n      \"adFlag\" : \"N\",\r\n      \"imageFile\": \"thumb7.png\"\r\n    },\r\n    {\r\n      \"id\" : 8,\r\n      \"category\" : \"CF\",\r\n      \"name\" : \"사피엔스커피마곡나루역점\",\r\n      \"point\" : 4.6,\r\n      \"review\" : 349,\r\n      \"adFlag\" : \"N\",\r\n      \"imageFile\": \"thumb8.png\"\r\n    },\r\n    {\r\n      \"id\" : 9,\r\n      \"category\" : \"CK\",\r\n      \"name\" : \"후라이드참잘하는집-마곡방화점\",\r\n      \"point\" : 4.7,\r\n      \"review\" : 3615,\r\n      \"adFlag\" : \"N\",\r\n      \"imageFile\": \"thumb9.png\"\r\n    },\r\n    {\r\n      \"id\" : 10,\r\n      \"category\" : \"CK\",\r\n      \"name\" : \"1인용치킨-등촌점\",\r\n      \"point\" : 4.8,\r\n      \"review\" : 37,\r\n      \"adFlag\" : \"N\",\r\n      \"imageFile\": \"thumb10.png\"\r\n    },\r\n    {\r\n      \"id\" : 11,\r\n      \"category\" : \"CF\",\r\n      \"name\" : \"카페인풀\",\r\n      \"point\" : 4.8,\r\n      \"review\" : 20,\r\n      \"adFlag\" : \"N\",\r\n      \"imageFile\": \"thumb11.png\"\r\n    },\r\n    {\r\n      \"id\" : 12,\r\n      \"category\" : \"SF\",\r\n      \"name\" : \"대한면옥수제냉면\",\r\n      \"point\" : 4.8,\r\n      \"review\" : 16,\r\n      \"adFlag\" : \"N\",\r\n      \"imageFile\": \"thumb12.png\"\r\n    },\r\n    {\r\n      \"id\" : 13,\r\n      \"category\" : \"PZ\",\r\n      \"name\" : \"탑피자\",\r\n      \"point\" : 4.8,\r\n      \"review\" : 309,\r\n      \"adFlag\" : \"N\",\r\n      \"imageFile\": \"thumb13.png\"\r\n    },\r\n    {\r\n      \"id\" : 14,\r\n      \"category\" : \"PZ\",\r\n      \"name\" : \"서오릉피자-등촌점\",\r\n      \"point\" : 4.9,\r\n      \"review\" : 514,\r\n      \"adFlag\" : \"Y\",\r\n      \"imageFile\": \"thumb14.png\"\r\n    },\r\n    {\r\n      \"id\" : 15,\r\n      \"category\" : \"SF\",\r\n      \"name\" : \"바르다김선생-우장산역점\",\r\n      \"point\" : 4.6,\r\n      \"review\" : 988,\r\n      \"adFlag\" : \"Y\",\r\n      \"imageFile\": \"thumb15.png\"\r\n    },\r\n    {\r\n      \"id\" : 16,\r\n      \"category\" : \"SF\",\r\n      \"name\" : \"홍대떡볶이-마곡점\",\r\n      \"point\" : 4.7,\r\n      \"review\" : 71,\r\n      \"adFlag\" : \"N\",\r\n      \"imageFile\": \"thumb16.png\"\r\n    },\r\n    {\r\n      \"id\" : 17,\r\n      \"category\" : \"CK\",\r\n      \"name\" : \"멕시카나-등촌점\",\r\n      \"point\" : 4.6,\r\n      \"review\" : 2530,\r\n      \"adFlag\" : \"N\",\r\n      \"imageFile\": \"thumb17.png\"\r\n    },\r\n    {\r\n      \"id\" : 18,\r\n      \"category\" : \"CF\",\r\n      \"name\" : \"과일에반하다.프루타-마곡점\",\r\n      \"point\" : 4.2,\r\n      \"review\" : 40,\r\n      \"adFlag\" : \"N\",\r\n      \"imageFile\": \"thumb18.png\"\r\n    }\r\n  ]\r\n}\r\n\r\n\r\n",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "",
+                                "headers": [],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "",
+                        "method": "get",
+                        "endpoint": "dcx/1/shopDetail/:id",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"shop\": {\n    \n  }\n}\n",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "",
+                                "headers": [
+                                    {
+                                        "key": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"shop\": {\n      \"id\" : 1,\n      \"name\" : \"치킨플러스-마곡방화점\",\n      \"point\" : 4.3,\n      \"review\" : 217,\n      \"distance\" : \"1.6km\",\n      \"time\" : \"50~60분\",\n      \"imageFile\": \"detail1.png\"\n  }\n}\n\n",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "1 ",
+                                "headers": [
+                                    {
+                                        "key": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [
+                                    {
+                                        "target": "params",
+                                        "modifier": "id",
+                                        "value": "1",
+                                        "isRegex": false
+                                    }
+                                ],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"shop\": {\n      \"id\" : 2,\n      \"name\" : \"피자선생-마곡방화점\",\n      \"point\" : 4.8,\n      \"review\" : 114,\n      \"distance\" : \"2.2km\",\n      \"time\" : \"45~55분\",\n      \"imageFile\": \"detail2.png\"\n  }\n}\n\n",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "2",
+                                "headers": [
+                                    {
+                                        "key": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [
+                                    {
+                                        "target": "params",
+                                        "modifier": "id",
+                                        "value": "2",
+                                        "isRegex": false
+                                    }
+                                ],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"shop\": {\n      \"id\" : 3,\n      \"name\" : \"미친피자-화곡점\",\n      \"point\" : 4.3,\n      \"review\" : 990,\n      \"distance\" : \"2.0km\",\n      \"time\" : \"33분\",\n      \"imageFile\": \"detail3.png\"\n  }\n}\n\n",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "3",
+                                "headers": [
+                                    {
+                                        "key": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [
+                                    {
+                                        "target": "params",
+                                        "modifier": "id",
+                                        "value": "3",
+                                        "isRegex": false
+                                    }
+                                ],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"shop\": {\n      \"id\" : 4,\n      \"name\" : \"카페인중독-마곡점\",\n      \"point\" : 4.5,\n      \"review\" : 33,\n      \"distance\" : \"534m\",\n      \"time\" : \"35~45분\",\n      \"imageFile\": \"detail4.png\"\n  }\n}\n\n",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "4",
+                                "headers": [
+                                    {
+                                        "key": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [
+                                    {
+                                        "target": "params",
+                                        "modifier": "id",
+                                        "value": "4",
+                                        "isRegex": false
+                                    }
+                                ],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"shop\": {\n      \"id\" : 5,\n      \"name\" : \"데일리김밥\",\n      \"point\" : 4.8,\n      \"review\" : 316,\n      \"distance\" : \"727m\",\n      \"time\" : \"21분\",\n      \"imageFile\": \"detail5.png\"\n  }\n}\n\n",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "5",
+                                "headers": [],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [
+                                    {
+                                        "target": "params",
+                                        "modifier": "id",
+                                        "value": "5",
+                                        "isRegex": false
+                                    }
+                                ],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"shop\": {\n      \"id\" : 6,\n      \"name\" : \"신전떡볶이-서울공항점\",\n      \"point\" : 4.8,\n      \"review\" : 1562,\n      \"distance\" : \"2.0km\",\n      \"time\" : \"55~65분\",\n      \"imageFile\": \"detail6.png\"\n  }\n}\n\n",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "6",
+                                "headers": [],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [
+                                    {
+                                        "target": "params",
+                                        "modifier": "id",
+                                        "value": "6",
+                                        "isRegex": false
+                                    }
+                                ],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"shop\": {\n      \"id\" : 7,\n      \"name\" : \"믹스쿡\",\n      \"point\" : 4.3,\n      \"review\" : 0,\n      \"distance\" : \"1.6km\",\n      \"time\" : \"23분\",\n      \"imageFile\": \"detail7.png\"\n  }\n}\n\n",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "7",
+                                "headers": [],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [
+                                    {
+                                        "target": "params",
+                                        "modifier": "id",
+                                        "value": "7",
+                                        "isRegex": false
+                                    }
+                                ],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"shop\": {\n      \"id\" : 8,\n      \"name\" : \"사피엔스커피마곡나루역점\",\n      \"point\" : 4.6,\n      \"review\" : 349,\n      \"distance\" : \"992m\",\n      \"time\" : \"19분\",\n      \"imageFile\": \"detail8.png\"\n  }\n}\n\n",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "8",
+                                "headers": [],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [
+                                    {
+                                        "target": "params",
+                                        "modifier": "id",
+                                        "value": "8",
+                                        "isRegex": false
+                                    }
+                                ],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"shop\": {\n      \"id\" : 9,\n      \"name\" : \"후라이드참잘하는집-마곡방화점\",\n      \"point\" : 4.7,\n      \"review\" : 3615,\n      \"distance\" : \"1.6km\",\n      \"time\" : \"45~55분\",\n      \"imageFile\": \"detail9.png\"\n  }\n}\n\n",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "9",
+                                "headers": [],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [
+                                    {
+                                        "target": "params",
+                                        "modifier": "id",
+                                        "value": "9",
+                                        "isRegex": false
+                                    }
+                                ],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"shop\": {\n      \"id\" : 10,\n      \"name\" : \"1인용치킨-등촌점\",\n      \"point\" : 4.8,\n      \"review\" : 37,\n      \"distance\" : \"1.4km\",\n      \"time\" : \"55~65분\",\n      \"imageFile\": \"detail10.png\"\n  }\n}\n\n",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "10",
+                                "headers": [],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [
+                                    {
+                                        "target": "params",
+                                        "modifier": "id",
+                                        "value": "10",
+                                        "isRegex": false
+                                    }
+                                ],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"shop\": {\n      \"id\" : 11,\n      \"name\" : \"카페인풀\",\n      \"point\" : 4.8,\n      \"review\" : 20,\n      \"distance\" : \"983m\",\n      \"time\" : \"25분\",\n      \"imageFile\": \"detail11.png\"\n  }\n}\n\n",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "11",
+                                "headers": [],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [
+                                    {
+                                        "target": "params",
+                                        "modifier": "id",
+                                        "value": "11",
+                                        "isRegex": false
+                                    }
+                                ],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"shop\": {\n      \"id\" : 12,\n      \"name\" : \"대한면옥수제냉면\",\n      \"point\" : 4.8,\n      \"review\" : 16,\n      \"distance\" : \"475m\",\n      \"time\" : \"22분\",\n      \"imageFile\": \"detail12.png\"\n  }\n}\n\n",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "12",
+                                "headers": [],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [
+                                    {
+                                        "target": "params",
+                                        "modifier": "id",
+                                        "value": "12",
+                                        "isRegex": false
+                                    }
+                                ],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"shop\": {\n      \"id\" : 13,\n      \"name\" : \"탑피자\",\n      \"point\" : 4.8,\n      \"review\" : 309,\n      \"distance\" : \"2.0km\",\n      \"time\" : \"53~63분\",\n      \"imageFile\": \"detail13.png\"\n  }\n}\n\n",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "13",
+                                "headers": [],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [
+                                    {
+                                        "target": "params",
+                                        "modifier": "id",
+                                        "value": "13",
+                                        "isRegex": false
+                                    }
+                                ],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"shop\": {\n      \"id\" : 14,\n      \"name\" : \"서오릉피자-등촌점\",\n      \"point\" : 4.9,\n      \"review\" : 514,\n      \"distance\" : \"620m\",\n      \"time\" : \"23분\",\n      \"imageFile\": \"detail14.png\"\n  }\n}\n\n",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "14",
+                                "headers": [],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [
+                                    {
+                                        "target": "params",
+                                        "modifier": "id",
+                                        "value": "14",
+                                        "isRegex": false
+                                    }
+                                ],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"shop\": {\n      \"id\" : 15,\n      \"name\" : \"바르다김선생-우장산역점\",\n      \"point\" : 4.6,\n      \"review\" : 988,\n      \"distance\" : \"1.6km\",\n      \"time\" : \"53~63분\",\n      \"imageFile\": \"detail15.png\"\n  }\n}\n\n",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "15",
+                                "headers": [],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [
+                                    {
+                                        "target": "params",
+                                        "modifier": "id",
+                                        "value": "15",
+                                        "isRegex": false
+                                    }
+                                ],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"shop\": {\n      \"id\" : 16,\n      \"name\" : \"홍대떡볶이-마곡점\",\n      \"point\" : 4.7,\n      \"review\" : 71,\n      \"distance\" : \"1.1km\",\n      \"time\" : \"35~45분\",\n      \"imageFile\": \"detail16.png\"\n  }\n}\n\n",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "16",
+                                "headers": [],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [
+                                    {
+                                        "target": "params",
+                                        "modifier": "id",
+                                        "value": "16",
+                                        "isRegex": false
+                                    }
+                                ],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"shop\": {\n      \"id\" : 17,\n      \"name\" : \"멕시카나-등촌점\",\n      \"point\" : 4.6,\n      \"review\" : 2530,\n      \"distance\" : \"750m\",\n      \"time\" : \"45~55분\",\n      \"imageFile\": \"detail17.png\"\n  }\n}\n\n",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "17",
+                                "headers": [],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [
+                                    {
+                                        "target": "params",
+                                        "modifier": "id",
+                                        "value": "17",
+                                        "isRegex": false
+                                    }
+                                ],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"shop\": {\n      \"id\" : 18,\n      \"name\" : \"과일에반하다.프루타-마곡점\",\n      \"point\" : 4.2,\n      \"review\" : 40,\n      \"distance\" : \"1.5km\",\n      \"time\" : \"21분\",\n      \"imageFile\": \"detail18.png\"\n  }\n}\n\n",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "18",
+                                "headers": [],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [
+                                    {
+                                        "target": "params",
+                                        "modifier": "id",
+                                        "value": "18",
+                                        "isRegex": false
+                                    }
+                                ],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false
+                    }
+                ],
+                "proxyMode": false,
+                "proxyHost": "",
+                "https": false,
+                "cors": true,
+                "headers": [
+                    {
+                        "key": "Access-Control-Allow-Origin",
+                        "value": "*"
+                    },
+                    {
+                        "key": "Access-Control-Allow-Methods",
+                        "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+                    },
+                    {
+                        "key": "Access-Control-Allow-Headers",
+                        "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                    },
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "proxyReqHeaders": [
+                    {
+                        "key": "",
+                        "value": ""
+                    }
+                ],
+                "proxyResHeaders": [
+                    {
+                        "key": "",
+                        "value": ""
+                    }
+                ]
+            }
+        }
+    ]
+}

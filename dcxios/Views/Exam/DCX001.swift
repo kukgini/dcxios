@@ -114,34 +114,57 @@ struct DCX001: View {
             }
             .listStyle(.plain)
             
-            Button(action: {
-                API.get(
-                    url: "https://httpbin.org/get",
-                    complition: { result in
-                        switch result {
-                        case .success(let json):
-                            print("\(json)")
-                        case .failure(let error):
-                            print("\(error.localizedDescription)")
-                        }
-                    })
-            }) {
-                Text("RestAPI GET Test")
-            }
-            Button(action: {
-                API.post(
-                    url: "https://httpbin.org/post",
-                    data: ["hello":"world"],
-                    complition: { result in
-                        switch result {
-                        case .success(let json):
-                            print("Hello \(json["json"]["hello"].stringValue)!")
-                        case .failure(let error):
-                            print("\(error.localizedDescription)")
-                        }
-                    })
-            }) {
-                Text("RestAPI POST Test")
+            HStack {
+                Button(action: {
+                    API.get(
+                        url: "https://httpbin.org/get",
+                        complition: { result in
+                            switch result {
+                            case .success(let json):
+                                print("\(json)")
+                            case .failure(let error):
+                                print("\(error.localizedDescription)")
+                            }
+                        })
+                }) {
+                    Text("GET")
+                }
+                Text("|")
+                Button(action: {
+                    API.post(
+                        url: "https://httpbin.org/post",
+                        data: ["hello":"world"],
+                        complition: { result in
+                            switch result {
+                            case .success(let json):
+                                print("Hello \(json["json"]["hello"].stringValue)!")
+                            case .failure(let error):
+                                print("\(error.localizedDescription)")
+                            }
+                        })
+                }) {
+                    Text("POST")
+                }
+                Text("|")
+                Button(action: {
+                    API.get(
+                        url: "http://localhost:3000/dcx/1/shopList",
+                        complition: { result in
+                            switch result {
+                            case .success(let json):
+                                do {
+                                    print(json["shopList"])
+                                    model.shopList = try decode(json["shopList"].rawData())
+                                } catch {
+                                    print("GET shopList failed. \(error)")
+                                }
+                            case .failure(let error):
+                                print("\(error.localizedDescription)")
+                            }
+                        })
+                }) {
+                    Text("SHOP LIST")
+                }
             }
             FavoriteButton(isSet: $isExpanded)
             Spacer()

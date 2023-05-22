@@ -12,7 +12,7 @@ public enum DCXView {
 public enum Category: String, Codable, Hashable {
     case chicken = "CK"
     case pizza = "PZ"
-    case bunsik = "SP"
+    case bunsik = "SF"
     case caffee = "CF"
 }
 
@@ -73,10 +73,15 @@ func load<T: Decodable>(_ filename: String) -> T {
 
     do {
         let json = JSON(data)
-        let decoder = JSONDecoder()
-        return try decoder.decode(T.self, from: json["shopList"].rawData())
+        return try decode(json["shopList"].rawData())
     } catch {
         fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
     }
 }
 
+func decode<T: Decodable>(_ data: Data) throws -> T {
+    do {
+        let decoder = JSONDecoder()
+        return try decoder.decode(T.self, from: data)
+    }
+}

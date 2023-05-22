@@ -74,25 +74,23 @@ struct DCX001: View {
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
             Text(model.greeting)
+                .padding(.bottom)
             
-            HStack {
-                FilterButton(label: "전체", filter: $model.filter, category: nil)
-                Spacer()
-                FilterButton(label: "치킨", filter: $model.filter, category: .chicken)
-                Spacer()
-                FilterButton(label: "피자", filter: $model.filter, category: .pizza)
-                Spacer()
-                FilterButton(label: "분식", filter: $model.filter, category: .bunsik)
-                Spacer()
-                FilterButton(label: "카페", filter: $model.filter, category: .caffee)
+            VStack(alignment: .center, spacing: 15) {
+                HStack(alignment: .center, spacing: 25) {
+                    FilterButton(label: "전체", filter: $model.filter, category: nil)
+                    FilterButton(label: "치킨", filter: $model.filter, category: .chicken)
+                    FilterButton(label: "피자", filter: $model.filter, category: .pizza)
+                    FilterButton(label: "분식", filter: $model.filter, category: .bunsik)
+                    FilterButton(label: "카페", filter: $model.filter, category: .caffee)
+                }
+                HStack(alignment: .center, spacing: 10) {
+                    SortButton(label: "기본 정렬순", option: $model.sortOption, key: .basic)
+                    SortButton(label: "별점 높은순", option: $model.sortOption, key: .point)
+                    SortButton(label: "리뷰 많은순", option: $model.sortOption, key: .review)
+                }
             }
-            HStack {
-                SortButton(label: "기본 정렬순", option: $model.sortOption, key: .basic)
-                Spacer()
-                SortButton(label: "별점 높은순", option: $model.sortOption, key: .point)
-                Spacer()
-                SortButton(label: "리뷰 많은순", option: $model.sortOption, key: .review)
-            }
+            .padding()
             
             List {
                 ForEach(filteredShops) { shop in
@@ -113,6 +111,7 @@ struct DCX001: View {
                 }
             }
             .listStyle(.plain)
+            .padding()
             
             HStack {
                 Button(action: {
@@ -167,6 +166,7 @@ struct DCX001: View {
                 }
             }
             FavoriteButton(isSet: $isExpanded)
+                .padding()
             Spacer()
             CustomDisclosureGroup(isExpanded: $isExpanded) {
                 isExpanded.toggle()

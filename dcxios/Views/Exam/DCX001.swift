@@ -14,6 +14,11 @@ struct SortButton: View {
             Text(label)
         }
         .buttonStyle(BorderlessButtonStyle())
+        .padding(10)
+        .overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(lineWidth: 1)
+        )
     }
 }
 
@@ -29,6 +34,11 @@ struct FilterButton: View {
             Text(label)
         }
         .buttonStyle(BorderlessButtonStyle())
+        .padding(10)
+        .overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(Color.purple, lineWidth: 1)
+        )
     }
 }
 
@@ -76,15 +86,15 @@ struct DCX001: View {
             Text(model.greeting)
                 .padding(.bottom)
             
-            VStack(alignment: .center, spacing: 15) {
-                HStack(alignment: .center, spacing: 25) {
+            VStack(alignment: .center) {
+                HStack(alignment: .center) {
                     FilterButton(label: "전체", filter: $model.filter, category: nil)
                     FilterButton(label: "치킨", filter: $model.filter, category: .chicken)
                     FilterButton(label: "피자", filter: $model.filter, category: .pizza)
                     FilterButton(label: "분식", filter: $model.filter, category: .bunsik)
                     FilterButton(label: "카페", filter: $model.filter, category: .caffee)
                 }
-                HStack(alignment: .center, spacing: 10) {
+                HStack(alignment: .center) {
                     SortButton(label: "기본 정렬순", option: $model.sortOption, key: .basic)
                     SortButton(label: "별점 높은순", option: $model.sortOption, key: .point)
                     SortButton(label: "리뷰 많은순", option: $model.sortOption, key: .review)

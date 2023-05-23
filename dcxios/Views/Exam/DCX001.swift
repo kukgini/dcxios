@@ -32,6 +32,11 @@ struct NameFilterField: View {
             text: $filter
         )
         .disableAutocorrection(true)
+        .padding(10)
+        .overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(lineWidth: 1)
+        )
     }
 }
 

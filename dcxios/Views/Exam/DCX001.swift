@@ -128,7 +128,11 @@ struct DCX001: View {
                         ShopView(shop: shop)
                     }
                 }
-                
+            }
+            .listStyle(.plain)
+//            .padding()
+            
+            List {
                 ForEach(1..<10) { index in
                     if index % 2 != 0 {
                         ListItemView(alignment: .left, title: "Title \(index)", description: "BlaBla... \(index)")
@@ -138,7 +142,7 @@ struct DCX001: View {
                 }
             }
             .listStyle(.plain)
-            .padding()
+//            .padding()
             
             HStack {
                 Button(action: {

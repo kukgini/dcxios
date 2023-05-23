@@ -115,7 +115,10 @@ struct DCX001: View {
                     SortButton(label: "별점 높은순", option: $model.sortOption, key: .point)
                     SortButton(label: "리뷰 많은순", option: $model.sortOption, key: .review)
                 }
-                NameFilterField(label: "Shop Name", filter: $model.nameFilter)
+                HStack {
+                    NameFilterField(label: "Shop Name", filter: $model.nameFilter)
+                    FavoriteButton(isSet: $model.adFilter)
+                }
             }
             .padding()
             
@@ -196,8 +199,6 @@ struct DCX001: View {
                     Text("SHOP LIST")
                 }
             }
-            FavoriteButton(isSet: $isExpanded)
-                .padding()
             Spacer()
             CustomDisclosureGroup(isExpanded: $isExpanded) {
                 isExpanded.toggle()

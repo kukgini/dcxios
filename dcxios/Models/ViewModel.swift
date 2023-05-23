@@ -28,6 +28,7 @@ final class ViewModel: ObservableObject {
     @Published var shopList: [Shop]
     @Published var shop: Shop?
     @Published var nameFilter: String = ""
+    @Published var adFilter: Bool = false
     @Published var categoryFilter: Category? = nil
     @Published var sortOption: SortOption = .basic {
         didSet {
@@ -45,10 +46,6 @@ final class ViewModel: ObservableObject {
     public init() {
         self.shopList = load("mockdata.json")
     }
-    
-    var adFlag: [Shop] {
-        shopList.filter { $0.adFlag == "Y" }
-    }
 
     var categories: [String: [Shop]] {
         Dictionary(
@@ -60,6 +57,9 @@ final class ViewModel: ObservableObject {
     var filteredShops: [Shop] {
         self.shopList.filter { shop in
             var result: Bool = true
+            if self.adFilter {
+                result = result && (shop.adFlag == "Y")
+            }
             if let filter = self.categoryFilter {
                 result = result && (shop.category == filter)
             }

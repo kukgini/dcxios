@@ -22,6 +22,17 @@ struct SortButton: View {
     }
 }
 
+struct GreetingView: View {
+    var greeting: String
+    var body: some View {
+        HStack(alignment: .center) {
+            Image(systemName: "globe")
+                .imageScale(.large)
+                .foregroundColor(.accentColor)
+            Text(greeting)
+        }
+    }
+}
 struct NameFilterField: View {
     var label: String
     @Binding var filter: String
@@ -89,12 +100,8 @@ struct DCX001: View {
     
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text(model.greeting)
-                .padding(.bottom)
-            
+            GreetingView(greeting: model.greeting)
+
             VStack(alignment: .center) {
                 HStack(alignment: .center) {
                     CategoryFilterButton(label: "전체", filter: $model.categoryFilter, category: nil)

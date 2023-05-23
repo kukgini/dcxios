@@ -7,9 +7,16 @@ struct DCX002: View {
     
     var body: some View {
         NavigationView {
-            List {
-                Text(model.greeting)
+            VStack (alignment: .center) {
+                if let shop = model.shop {
+                    Image(shop.imageFile)
+                    Text(shop.name)
+                    Text(shop.category.rawValue)
+                } else {
+                    Text ("no shop selected")
+                }
             }
+            .padding()
             .navigationBarTitle("Sub View")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(

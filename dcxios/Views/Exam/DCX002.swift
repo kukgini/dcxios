@@ -9,7 +9,13 @@ struct DCX002: View {
         NavigationView {
             VStack (alignment: .center) {
                 if let shop = model.shop {
-                    Image(shop.imageFile)
+                    Image(systemName: "star")
+                        .imageScale(.large)
+                        .frame(width: 100.0, height: 100.0, alignment: .center)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(lineWidth: 5)
+                        )
                     Text(shop.name)
                     Text(shop.category.rawValue)
                 } else {

@@ -69,15 +69,6 @@ struct DCX001: View {
     @EnvironmentObject var model: ViewModel
     @State var isExpanded: Bool
     
-    var filteredShops: [Shop] {
-        model.shopList.filter { shop in
-            guard let filter = model.filter else {
-                return true
-            }
-            return shop.category == filter
-        }
-    }
-    
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -103,7 +94,7 @@ struct DCX001: View {
             .padding()
             
             List {
-                ForEach(filteredShops) { shop in
+                ForEach(model.filteredShops) { shop in
                     Button(action: {
                         model.shop = shop
                         model.currentView = .dcx002

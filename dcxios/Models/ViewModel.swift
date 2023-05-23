@@ -29,8 +29,8 @@ final class ViewModel: ObservableObject {
     @Published var shop: Shop?
     @Published var filter: Category? = nil
     @Published var sortOption: SortOption = .basic {
-        willSet(newOption) {
-            switch newOption {
+        didSet {
+            switch sortOption {
                 case .basic:
                     shopList.sort(by: {$0.id < $1.id})
                 case .point:
@@ -54,6 +54,15 @@ final class ViewModel: ObservableObject {
             grouping: shopList,
             by: { $0.category.rawValue }
         )
+    }
+    
+    var filteredShops: [Shop] {
+        self.shopList.filter { shop in
+            guard let filter = self.filter else {
+                return true
+            }
+            return shop.category == filter
+        }
     }
 }
 

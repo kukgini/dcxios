@@ -44,7 +44,7 @@ struct NameFilterField: View {
         )
         .disableAutocorrection(true)
         .padding(10)
-        .overlay(
+        .background(
             RoundedRectangle(cornerRadius: 10)
                 .stroke(lineWidth: 1)
         )

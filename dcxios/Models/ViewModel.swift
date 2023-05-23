@@ -27,7 +27,8 @@ final class ViewModel: ObservableObject {
     @Published var currentView: DCXView = .dcx001
     @Published var shopList: [Shop]
     @Published var shop: Shop?
-    @Published var filter: Category? = nil
+    @Published var nameFilter: String = ""
+    @Published var categoryFilter: Category? = nil
     @Published var sortOption: SortOption = .basic {
         didSet {
             switch sortOption {
@@ -58,10 +59,14 @@ final class ViewModel: ObservableObject {
     
     var filteredShops: [Shop] {
         self.shopList.filter { shop in
-            guard let filter = self.filter else {
-                return true
+            var result: Bool = true
+            if let filter = self.categoryFilter {
+                result = result && (shop.category == filter)
             }
-            return shop.category == filter
+            if self.nameFilter.count > 1 {
+                result = result && (shop.name.contains(self.nameFilter))
+            }
+            return result
         }
     }
 }

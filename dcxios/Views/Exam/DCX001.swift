@@ -22,7 +22,20 @@ struct SortButton: View {
     }
 }
 
-struct FilterButton: View {
+struct NameFilterField: View {
+    var label: String
+    @Binding var filter: String
+    
+    var body: some View {
+        TextField(
+            label,
+            text: $filter
+        )
+        .disableAutocorrection(true)
+    }
+}
+
+struct CategoryFilterButton: View {
     var label: String
     @Binding var filter: Category?
     var category: Category?
@@ -79,17 +92,18 @@ struct DCX001: View {
             
             VStack(alignment: .center) {
                 HStack(alignment: .center) {
-                    FilterButton(label: "전체", filter: $model.filter, category: nil)
-                    FilterButton(label: "치킨", filter: $model.filter, category: .chicken)
-                    FilterButton(label: "피자", filter: $model.filter, category: .pizza)
-                    FilterButton(label: "분식", filter: $model.filter, category: .bunsik)
-                    FilterButton(label: "카페", filter: $model.filter, category: .caffee)
+                    CategoryFilterButton(label: "전체", filter: $model.categoryFilter, category: nil)
+                    CategoryFilterButton(label: "치킨", filter: $model.categoryFilter, category: .chicken)
+                    CategoryFilterButton(label: "피자", filter: $model.categoryFilter, category: .pizza)
+                    CategoryFilterButton(label: "분식", filter: $model.categoryFilter, category: .bunsik)
+                    CategoryFilterButton(label: "카페", filter: $model.categoryFilter, category: .caffee)
                 }
                 HStack(alignment: .center) {
                     SortButton(label: "기본 정렬순", option: $model.sortOption, key: .basic)
                     SortButton(label: "별점 높은순", option: $model.sortOption, key: .point)
                     SortButton(label: "리뷰 많은순", option: $model.sortOption, key: .review)
                 }
+                NameFilterField(label: "Shop Name", filter: $model.nameFilter)
             }
             .padding()
             

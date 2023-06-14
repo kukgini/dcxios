@@ -21,6 +21,7 @@
 		91B958702A08BC7900C7F75C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B9586F2A08BC7900C7F75C /* ContentView.swift */; };
 		91B958722A08BC7B00C7F75C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91B958712A08BC7B00C7F75C /* Assets.xcassets */; };
 		91B958752A08BC7B00C7F75C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91B958742A08BC7B00C7F75C /* Preview Assets.xcassets */; };
+		91C5213A2A39689D005CA02F /* ApplicationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C521392A39689D005CA02F /* ApplicationError.swift */; };
 		91E77FD52A0E1EBC0039AD1E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E77FD42A0E1EBC0039AD1E /* API.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		91B958712A08BC7B00C7F75C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91B958742A08BC7B00C7F75C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		91B9587B2A08BF9A00C7F75C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		91C521392A39689D005CA02F /* ApplicationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationError.swift; sourceTree = "<group>"; };
 		91E77FD42A0E1EBC0039AD1E /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		B125F6F5EB3864EE84407265 /* Pods-dcxios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dcxios.debug.xcconfig"; path = "Target Support Files/Pods-dcxios/Pods-dcxios.debug.xcconfig"; sourceTree = "<group>"; };
 		EB75530D5505DDA076862C30 /* Pods-dcxios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dcxios.release.xcconfig"; path = "Target Support Files/Pods-dcxios/Pods-dcxios.release.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			children = (
 				91B9587B2A08BF9A00C7F75C /* Info.plist */,
 				91B9586D2A08BC7800C7F75C /* dcxiosApp.swift */,
+				91C521392A39689D005CA02F /* ApplicationError.swift */,
 				91B9586F2A08BC7900C7F75C /* ContentView.swift */,
 				77A3BAD22A13346400BC2DFF /* Resources */,
 				914D7CC72A0CA2A400ACDA98 /* Views */,
@@ -286,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91C5213A2A39689D005CA02F /* ApplicationError.swift in Sources */,
 				91B958702A08BC7900C7F75C /* ContentView.swift in Sources */,
 				914D7CCF2A0CA3F400ACDA98 /* DCX002.swift in Sources */,
 				91B9586E2A08BC7800C7F75C /* dcxiosApp.swift in Sources */,

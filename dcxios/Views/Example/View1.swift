@@ -1,5 +1,3 @@
-// DCX001.swift
-
 import SwiftUI
 
 struct SortButton: View {
@@ -66,13 +64,11 @@ struct ShopView: View {
     
     var body: some View {
         HStack {
-            Image(systemName: "star")
-                .imageScale(.large)
             VStack (alignment: .leading){
                 HStack {
                     Text(shop.name)
                     if shop.adFlag == "Y" {
-                        Image(systemName: "star")
+                        Image(systemName: "star.fill")
                     }
                 }
                 HStack {
@@ -116,7 +112,7 @@ struct View1: View {
                     }
                 }
                 
-                ForEach(1..<10) { index in
+                ForEach(1..<5) { index in
                     if index % 2 != 0 {
                         ListItemView(alignment: .left, title: "Title \(index)", description: "BlaBla... \(index)")
                     } else {
@@ -193,7 +189,7 @@ struct View1: View {
                         .font(.system(size: 16, weight: .semibold, design: .monospaced))
                 }
             }
-            .navigationBarTitle("DCX001")
+            .navigationBarTitle("View1")
             .navigationBarItems(
                 leading: Text("A"),
                 trailing: Text("B"))

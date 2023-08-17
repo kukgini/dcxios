@@ -1,5 +1,3 @@
-// DCX002.swift
-
 import SwiftUI
 
 struct View2: View {

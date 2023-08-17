@@ -20,9 +20,7 @@ public enum SortOption: String, Codable, Hashable {
 final class ViewModel: ObservableObject {
     public static let singleton = ViewModel(file: "mockdata.json")
     
-    @Published var greeting = "Hello from Environment!"
     @Published var shopList: [Shop]
-    @Published var shop: Shop?
     @Published var nameFilter: String = ""
     @Published var adFilter: Bool = false
     @Published var categoryFilter: Category? = nil

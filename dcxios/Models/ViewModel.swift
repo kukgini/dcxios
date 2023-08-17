@@ -4,11 +4,6 @@ import Foundation
 import Combine
 import SwiftyJSON
 
-public enum DCXView {
-    case dcx001
-    case dcx002
-}
-
 public enum Category: String, Codable, Hashable {
     case chicken = "CK"
     case pizza = "PZ"
@@ -23,8 +18,9 @@ public enum SortOption: String, Codable, Hashable {
 }
 
 final class ViewModel: ObservableObject {
+    public static let singleton = ViewModel(file: "mockdata.json")
+    
     @Published var greeting = "Hello from Environment!"
-    @Published var currentView: DCXView = .dcx001
     @Published var shopList: [Shop]
     @Published var shop: Shop?
     @Published var nameFilter: String = ""
@@ -43,8 +39,8 @@ final class ViewModel: ObservableObject {
         }
     }
     
-    public init() {
-        self.shopList = load("mockdata.json")
+    public init(file: String) {
+        self.shopList = load(file)
     }
 
     var categories: [String: [Shop]] {

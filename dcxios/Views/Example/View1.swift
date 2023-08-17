@@ -84,7 +84,7 @@ struct ShopView: View {
     }
 }
 
-struct DCX001: View {
+struct View1: View {
     @EnvironmentObject var model: ViewModel
     @State var isExpanded: Bool
     
@@ -111,7 +111,7 @@ struct DCX001: View {
                 }
                 
                 ForEach(model.filteredShops) { shop in
-                    NavigationLink(destination: DCX002(item: shop)) {
+                    NavigationLink(destination: View2(item: shop)) {
                         ShopView(shop: shop)
                     }
                 }
@@ -201,9 +201,9 @@ struct DCX001: View {
     }
 }
 
-struct DCX001_Previews: PreviewProvider {
+struct View1_Previews: PreviewProvider {
     static var previews: some View {
-        DCX001(isExpanded: true)
-            .environmentObject(ViewModel())
+        View1(isExpanded: true)
+            .environmentObject(ViewModel.singleton)
     }
 }

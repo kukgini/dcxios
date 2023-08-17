@@ -2,7 +2,7 @@
 
 import SwiftUI
 
-struct DCX002: View {
+struct View2: View {
     @EnvironmentObject var model: ViewModel
     let item: Shop?
     
@@ -38,9 +38,11 @@ struct DCX002: View {
     }
 }
 
-struct DCX002_Previews: PreviewProvider {
+struct View2_Previews: PreviewProvider {
     static var previews: some View {
-        DCX002(item: nil)
-            .environmentObject(ViewModel())
+        View2(item: ViewModel.singleton.shopList.first)
+            .environmentObject(ViewModel.singleton)
+        View2(item: nil)
+            .environmentObject(ViewModel.singleton)
     }
 }

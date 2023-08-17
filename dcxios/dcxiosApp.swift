@@ -34,13 +34,13 @@ struct dcxiosApp: App {
     func authorize() {
         let context: LAContext = LAContext()
         context.evaluatePolicy(
-            .deviceOwnerAuthenticationWithBiometrics,
-            localizedReason: "Biometric authentication required.")
+            .deviceOwnerAuthentication,
+            localizedReason: "Device authentication required.")
         { successed, error in
             if successed {
                 self.authorized = true
             } else {
-                logger.error("Biometric authentication failed. \(error)")
+                logger.error("Device authentication failed. \(error)")
                 self.error = ApplicationError.wrap(error!)
                 self.showError = true
             }

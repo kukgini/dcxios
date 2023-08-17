@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13D3BFD0DA16B4720889AB76 /* Pods_dcxios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 798F62117391BDFB2AB943D5 /* Pods_dcxios.framework */; };
 		77855EC92A16250100C5A043 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77855EC82A16250100C5A043 /* Shop.swift */; };
 		77A3BACF2A13332700BC2DFF /* CustomDisclosureGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3BACE2A13332700BC2DFF /* CustomDisclosureGroup.swift */; };
 		77A3BAD42A13347E00BC2DFF /* mockdata.json in Resources */ = {isa = PBXBuildFile; fileRef = 77A3BAD32A13347E00BC2DFF /* mockdata.json */; };
@@ -16,6 +15,8 @@
 		914D7CCD2A0CA3E600ACDA98 /* DCX001.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914D7CCC2A0CA3E600ACDA98 /* DCX001.swift */; };
 		914D7CCF2A0CA3F400ACDA98 /* DCX002.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914D7CCE2A0CA3F400ACDA98 /* DCX002.swift */; };
 		914D7CD52A0CA6D700ACDA98 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914D7CD42A0CA6D700ACDA98 /* FavoriteButton.swift */; };
+		9194FB512A8E45AE003F58A8 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 9194FB502A8E45AE003F58A8 /* SwiftyJSON */; };
+		9194FB542A8E45C4003F58A8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9194FB532A8E45C4003F58A8 /* Alamofire */; };
 		91998EFA2A11E8B9003C09BE /* ViewChangeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91998EF92A11E8B9003C09BE /* ViewChangeButton.swift */; };
 		91B9586E2A08BC7800C7F75C /* dcxiosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B9586D2A08BC7800C7F75C /* dcxiosApp.swift */; };
 		91B958702A08BC7900C7F75C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B9586F2A08BC7900C7F75C /* ContentView.swift */; };
@@ -30,7 +31,6 @@
 		77A3BACE2A13332700BC2DFF /* CustomDisclosureGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDisclosureGroup.swift; sourceTree = "<group>"; };
 		77A3BAD32A13347E00BC2DFF /* mockdata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mockdata.json; sourceTree = "<group>"; };
 		77A3BAD52A13B15700BC2DFF /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
-		798F62117391BDFB2AB943D5 /* Pods_dcxios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dcxios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		914D7CCA2A0CA2E900ACDA98 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		914D7CCC2A0CA3E600ACDA98 /* DCX001.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCX001.swift; sourceTree = "<group>"; };
 		914D7CCE2A0CA3F400ACDA98 /* DCX002.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCX002.swift; sourceTree = "<group>"; };
@@ -44,8 +44,6 @@
 		91B9587B2A08BF9A00C7F75C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		91C521392A39689D005CA02F /* ApplicationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationError.swift; sourceTree = "<group>"; };
 		91E77FD42A0E1EBC0039AD1E /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		B125F6F5EB3864EE84407265 /* Pods-dcxios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dcxios.debug.xcconfig"; path = "Target Support Files/Pods-dcxios/Pods-dcxios.debug.xcconfig"; sourceTree = "<group>"; };
-		EB75530D5505DDA076862C30 /* Pods-dcxios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dcxios.release.xcconfig"; path = "Target Support Files/Pods-dcxios/Pods-dcxios.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13D3BFD0DA16B4720889AB76 /* Pods_dcxios.framework in Frameworks */,
+				9194FB512A8E45AE003F58A8 /* SwiftyJSON in Frameworks */,
+				9194FB542A8E45C4003F58A8 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,8 +110,6 @@
 			children = (
 				91B9586C2A08BC7800C7F75C /* dcxios */,
 				91B9586B2A08BC7800C7F75C /* Products */,
-				9C64C6CA54C1890E2A558986 /* Pods */,
-				C1AC7FDD8A28C7C458B932D2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,23 +154,6 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		9C64C6CA54C1890E2A558986 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				B125F6F5EB3864EE84407265 /* Pods-dcxios.debug.xcconfig */,
-				EB75530D5505DDA076862C30 /* Pods-dcxios.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		C1AC7FDD8A28C7C458B932D2 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				798F62117391BDFB2AB943D5 /* Pods_dcxios.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -181,17 +161,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 91B958782A08BC7B00C7F75C /* Build configuration list for PBXNativeTarget "dcxios" */;
 			buildPhases = (
-				9CF4E68AFCE2B0FE7D5DABAB /* [CP] Check Pods Manifest.lock */,
 				91B958662A08BC7800C7F75C /* Sources */,
 				91B958672A08BC7800C7F75C /* Frameworks */,
 				91B958682A08BC7800C7F75C /* Resources */,
-				056FED65151F32716819E9B2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = dcxios;
+			packageProductDependencies = (
+				9194FB502A8E45AE003F58A8 /* SwiftyJSON */,
+				9194FB532A8E45C4003F58A8 /* Alamofire */,
+			);
 			productName = dcxios;
 			productReference = 91B9586A2A08BC7800C7F75C /* dcxios.app */;
 			productType = "com.apple.product-type.application";
@@ -220,6 +202,10 @@
 				Base,
 			);
 			mainGroup = 91B958612A08BC7800C7F75C;
+			packageReferences = (
+				9194FB4F2A8E45AE003F58A8 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				9194FB522A8E45C4003F58A8 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 91B9586B2A08BC7800C7F75C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -241,48 +227,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		056FED65151F32716819E9B2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-dcxios/Pods-dcxios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-dcxios/Pods-dcxios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-dcxios/Pods-dcxios-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9CF4E68AFCE2B0FE7D5DABAB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-dcxios-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		91B958662A08BC7800C7F75C /* Sources */ = {
@@ -357,7 +301,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -411,7 +355,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -423,7 +367,6 @@
 		};
 		91B958792A08BC7B00C7F75C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B125F6F5EB3864EE84407265 /* Pods-dcxios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -439,6 +382,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +401,6 @@
 		};
 		91B9587A2A08BC7B00C7F75C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB75530D5505DDA076862C30 /* Pods-dcxios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -473,6 +416,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -511,6 +455,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9194FB4F2A8E45AE003F58A8 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.0.1;
+			};
+		};
+		9194FB522A8E45C4003F58A8 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9194FB502A8E45AE003F58A8 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9194FB4F2A8E45AE003F58A8 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		9194FB532A8E45C4003F58A8 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9194FB522A8E45C4003F58A8 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 91B958622A08BC7800C7F75C /* Project object */;
 }

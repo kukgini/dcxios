@@ -4,11 +4,12 @@ import SwiftUI
 
 struct DCX002: View {
     @EnvironmentObject var model: ViewModel
+    let item: Shop?
     
     var body: some View {
-        NavigationView {
-            VStack (alignment: .center) {
-                if let shop = model.shop {
+        if let shop = self.item {
+            NavigationView {
+                VStack (alignment: .center) {
                     Image(systemName: "star")
                         .imageScale(.large)
                         .frame(width: 100.0, height: 100.0, alignment: .center)
@@ -18,23 +19,28 @@ struct DCX002: View {
                         )
                     Text(shop.name)
                     Text(shop.category.rawValue)
-                } else {
+
+                }
+                .padding()
+                .navigationBarTitle(shop.name)
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationBarItems(
+                    leading: Text("A"),
+                    trailing: Text("B"))
+            }
+        } else {
+            NavigationView {
+                VStack (alignment: .center) {
                     Text ("no shop selected")
                 }
             }
-            .padding()
-            .navigationBarTitle("Sub View")
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationBarItems(
-                leading: ViewChangeButton(label: "<", view: .dcx001),
-                trailing: Text("B"))
         }
     }
 }
 
 struct DCX002_Previews: PreviewProvider {
     static var previews: some View {
-        DCX002()
+        DCX002(item: nil)
             .environmentObject(ViewModel())
     }
 }

@@ -4,10 +4,7 @@ struct ContentView: View {
     @EnvironmentObject var model: ViewModel
     
     var body: some View {
-        switch model.currentView {
-        case .dcx001: DCX001(isExpanded: false)
-        case .dcx002: DCX002()
-        }
+        DCX001(isExpanded: false)
     }
 }
 

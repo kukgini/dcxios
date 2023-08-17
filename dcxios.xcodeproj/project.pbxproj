@@ -71,7 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				91998EF82A11E88E003C09BE /* Component */,
-				914D7CD12A0CA68600ACDA98 /* Exam */,
+				914D7CD12A0CA68600ACDA98 /* Example */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -85,13 +85,13 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		914D7CD12A0CA68600ACDA98 /* Exam */ = {
+		914D7CD12A0CA68600ACDA98 /* Example */ = {
 			isa = PBXGroup;
 			children = (
 				914D7CCC2A0CA3E600ACDA98 /* DCX001.swift */,
 				914D7CCE2A0CA3F400ACDA98 /* DCX002.swift */,
 			);
-			path = Exam;
+			path = Example;
 			sourceTree = "<group>";
 		};
 		91998EF82A11E88E003C09BE /* Component */ = {

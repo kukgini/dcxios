@@ -13,12 +13,15 @@ struct SortButton: View {
         }) {
             Text(label)
         }
-        .buttonStyle(BorderlessButtonStyle())
-        .padding(10)
-        .overlay(
-            RoundedRectangle(cornerRadius: 10)
-                .stroke(lineWidth: 1)
-        )
+        .buttonStyle(.bordered)
+        .buttonBorderShape(.roundedRectangle)
+        // if ios 1.5
+        // .buttonStyle(BorderlessButtonStyle())
+        // .padding(10)
+        // .overlay(
+        //     RoundedRectangle(cornerRadius: 10)
+        //         .stroke(lineWidth: 1)
+        // )
     }
 }
 
@@ -32,11 +35,13 @@ struct NameFilterField: View {
             text: $filter
         )
         .disableAutocorrection(true)
-        .padding(10)
-        .background(
-            RoundedRectangle(cornerRadius: 10)
-                .stroke(lineWidth: 1)
-        )
+        .textFieldStyle(.roundedBorder)
+        // if ios < 15
+        // .padding(10)
+        // .background(
+        //     RoundedRectangle(cornerRadius: 10)
+        //         .stroke(lineWidth: 1)
+        // )
     }
 }
 
@@ -51,12 +56,8 @@ struct CategoryFilterButton: View {
         }) {
             Text(label)
         }
-        .buttonStyle(BorderlessButtonStyle())
-        .padding(10)
-        .overlay(
-            RoundedRectangle(cornerRadius: 10)
-                .stroke(Color.purple, lineWidth: 1)
-        )
+        .buttonStyle(.bordered)
+        .buttonBorderShape(.roundedRectangle)
     }
 }
 
@@ -110,10 +111,7 @@ struct DCX001: View {
                 }
                 
                 ForEach(model.filteredShops) { shop in
-                    Button(action: {
-                        model.shop = shop
-                        model.currentView = .dcx002
-                    }) {
+                    NavigationLink(destination: DCX002(item: shop)) {
                         ShopView(shop: shop)
                     }
                 }

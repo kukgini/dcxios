@@ -2,8 +2,8 @@ import Foundation
 import SwiftUI
 
 extension Color {
-    init(hexcode: String) {
-        let scanner = Scanner(string: hexcode)
+    init(hex: String) {
+        let scanner = Scanner(string: hex)
         var rgbValue: UInt64 = 0
         
         scanner.scanHexInt64(&rgbValue)

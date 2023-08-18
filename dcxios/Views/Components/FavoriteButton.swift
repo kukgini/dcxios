@@ -13,6 +13,13 @@ struct FavoriteButton: View {
                 .labelStyle(.iconOnly)
                 .foregroundColor(isSet ? .yellow : .gray)
         }
+        .buttonStyle(BorderlessButtonStyle())
+        .padding(10)
+        .overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(lineWidth: 0)
+                .foregroundColor(Color.blue)
+        )
     }
 }
 

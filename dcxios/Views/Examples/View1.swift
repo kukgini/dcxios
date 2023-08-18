@@ -7,12 +7,19 @@ struct CategoryFilterButton: View {
     
     var body: some View {
         Button(action: {
+            print("filter category: \(category?.rawValue ?? "")")
             filter = category
         }) {
             Text(label)
         }
-        .buttonStyle(.bordered)
-        .buttonBorderShape(.roundedRectangle)
+         .buttonStyle(BorderlessButtonStyle())
+         .padding(10)
+         .overlay(
+             RoundedRectangle(cornerRadius: 10)
+                 .stroke(lineWidth: 0)
+                 .foregroundColor(Color.blue)
+         )
+        .font(.system(size: 13))
     }
 }
 
@@ -23,29 +30,19 @@ struct SortButton: View {
     
     var body: some View {
         Button(action: {
+            print("sort option: \(key.rawValue)")
             option = key
         }) {
             Text(label)
         }
-        .buttonStyle(.bordered)
-        .buttonBorderShape(.roundedRectangle)
-        .padding(1)
-        .font(.system(size: 15))
-    }
-}
-
-struct NameFilterField: View {
-    var label: String
-    @Binding var filter: String
-    
-    var body: some View {
-        TextField(
-            label,
-            text: $filter
-        )
-        .disableAutocorrection(true)
-        .textFieldStyle(.roundedBorder)
+        .buttonStyle(BorderlessButtonStyle())
         .padding(10)
+        .overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(lineWidth: 0)
+                .foregroundColor(Color.blue)
+        )
+        .font(.system(size: 13))
     }
 }
 
@@ -114,11 +111,13 @@ struct View1: View {
             List {
                 VStack(alignment: .center) {
                     HStack(alignment: .center) {
+                        FavoriteButton(isSet: $model.adFilter)
                         CategoryFilterButton(label: "전체", filter: $model.categoryFilter, category: nil)
                         CategoryFilterButton(label: "치킨", filter: $model.categoryFilter, category: .chicken)
                         CategoryFilterButton(label: "피자", filter: $model.categoryFilter, category: .pizza)
                         CategoryFilterButton(label: "분식", filter: $model.categoryFilter, category: .bunsik)
                         CategoryFilterButton(label: "카페", filter: $model.categoryFilter, category: .caffee)
+                        
                     }
                     HStack(alignment: .center) {
                         SortButton(label: "기본 정렬순", option: $model.sortOption, key: .basic)
@@ -126,45 +125,41 @@ struct View1: View {
                         SortButton(label: "리뷰 많은순", option: $model.sortOption, key: .review)
                     }
                     HStack {
-                        NameFilterField(label: "Shop Name", filter: $model.nameFilter)
-                        FavoriteButton(isSet: $model.adFilter)
+                        SearchBar(text: $model.nameFilter)
                     }
                 }
-                
                 ForEach(model.filteredShops) { shop in
                     NavigationLink(destination: ShopDetailView(item: shop)) {
                         ShopView(shop: shop)
                     }
                 }
-                
-                HStack(alignment: .center) {
-                    Button(action: {
-                        RestClient.get(
-                            url: "http://localhost:3000/dcx/1/shopList",
-                            complition: { result in
-                                switch result {
-                                case .success(let json):
-                                    do {
-                                        print(json["shopList"])
-                                        model.shopList = try decode(json["shopList"].rawData())
-                                    } catch {
-                                        print("GET shopList failed. \(error)")
-                                    }
-                                case .failure(let error):
-                                    print("\(error.localizedDescription)")
-                                }
-                            })
-                    }) {
-                        Text("FETCH SHOP LIST")
-                    }
-                    .buttonStyle(.bordered)
-                    .buttonBorderShape(.roundedRectangle)
-                }
             }
             .navigationBarTitle("View1")
             .navigationBarItems(
                 leading: Text("A"),
-                trailing: Text("B"))
+                trailing: fetchButton())
+        }
+    }
+    
+    func fetchButton() -> some View {
+        Button(action: {
+            RestClient.get(
+                url: "http://localhost:3000/dcx/1/shopList",
+                complition: { result in
+                    switch result {
+                    case .success(let json):
+                        do {
+                            print(json["shopList"])
+                            model.shopList = try decode(json["shopList"].rawData())
+                        } catch {
+                            print("GET shopList failed. \(error)")
+                        }
+                    case .failure(let error):
+                        print("\(error.localizedDescription)")
+                    }
+                })
+        }) {
+            Text("FETCH SHOP LIST")
         }
     }
 }

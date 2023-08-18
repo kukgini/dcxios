@@ -12,14 +12,16 @@ struct CategoryFilterButton: View {
         }) {
             Text(label)
         }
+        // [Important] buttonStyle needed for SwiftUI bug:
+        // https://stackoverflow.com/questions/63087817/strange-buttons-behaviour-in-a-list-swiftui
          .buttonStyle(BorderlessButtonStyle())
-         .padding(10)
-         .overlay(
-             RoundedRectangle(cornerRadius: 10)
-                 .stroke(lineWidth: 0)
-                 .foregroundColor(Color.blue)
-         )
-        .font(.system(size: 13))
+//         .padding(10)
+//         .overlay(
+//             RoundedRectangle(cornerRadius: 10)
+//                 .stroke(lineWidth: 0)
+//                 .foregroundColor(Color.blue)
+//         )
+//        .font(.system(size: 13))
     }
 }
 
@@ -35,14 +37,16 @@ struct SortButton: View {
         }) {
             Text(label)
         }
+        // [Important] buttonStyle needed for SwiftUI bug:
+        // https://stackoverflow.com/questions/63087817/strange-buttons-behaviour-in-a-list-swiftui
         .buttonStyle(BorderlessButtonStyle())
-        .padding(10)
-        .overlay(
-            RoundedRectangle(cornerRadius: 10)
-                .stroke(lineWidth: 0)
-                .foregroundColor(Color.blue)
-        )
-        .font(.system(size: 13))
+//        .padding(10)
+//        .overlay(
+//            RoundedRectangle(cornerRadius: 10)
+//                .stroke(lineWidth: 0)
+//                .foregroundColor(Color.blue)
+//        )
+//        .font(.system(size: 13))
     }
 }
 
@@ -159,7 +163,7 @@ struct View1: View {
                     }
                 })
         }) {
-            Text("FETCH SHOP LIST")
+            Text("Update")
         }
     }
 }

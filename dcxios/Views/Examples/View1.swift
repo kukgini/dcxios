@@ -1,5 +1,21 @@
 import SwiftUI
 
+struct CategoryFilterButton: View {
+    var label: String
+    @Binding var filter: Category?
+    var category: Category?
+    
+    var body: some View {
+        Button(action: {
+            filter = category
+        }) {
+            Text(label)
+        }
+        .buttonStyle(.bordered)
+        .buttonBorderShape(.roundedRectangle)
+    }
+}
+
 struct SortButton: View {
     var label: String
     @Binding var option: SortOption
@@ -13,13 +29,8 @@ struct SortButton: View {
         }
         .buttonStyle(.bordered)
         .buttonBorderShape(.roundedRectangle)
-        // if ios 1.5
-        // .buttonStyle(BorderlessButtonStyle())
-        // .padding(10)
-        // .overlay(
-        //     RoundedRectangle(cornerRadius: 10)
-        //         .stroke(lineWidth: 1)
-        // )
+        .padding(1)
+        .font(.system(size: 15))
     }
 }
 
@@ -34,28 +45,7 @@ struct NameFilterField: View {
         )
         .disableAutocorrection(true)
         .textFieldStyle(.roundedBorder)
-        // if ios < 15
-        // .padding(10)
-        // .background(
-        //     RoundedRectangle(cornerRadius: 10)
-        //         .stroke(lineWidth: 1)
-        // )
-    }
-}
-
-struct CategoryFilterButton: View {
-    var label: String
-    @Binding var filter: Category?
-    var category: Category?
-    
-    var body: some View {
-        Button(action: {
-            filter = category
-        }) {
-            Text(label)
-        }
-        .buttonStyle(.bordered)
-        .buttonBorderShape(.roundedRectangle)
+        .padding(10)
     }
 }
 

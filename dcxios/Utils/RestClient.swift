@@ -2,7 +2,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-public struct API {
+public struct RestClient {
     
     static let defaultApiHeaders = [
         "Content-Type": "application/json",

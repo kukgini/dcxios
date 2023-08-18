@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var model: ViewModel
+    @EnvironmentObject var model: dcxiosStates
     
     var body: some View {
         View1(isExpanded: false)
@@ -11,6 +11,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(ViewModel.singleton)
+            .environmentObject(dcxiosStates.singleton)
     }
 }

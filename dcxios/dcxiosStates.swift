@@ -1,5 +1,3 @@
-// ModelData.swift
-
 import Foundation
 import Combine
 import SwiftyJSON
@@ -17,8 +15,8 @@ public enum SortOption: String, Codable, Hashable {
     case review = "review"
 }
 
-final class ViewModel: ObservableObject {
-    public static let singleton = ViewModel(file: "mockdata.json")
+final class dcxiosStates: ObservableObject {
+    public static let singleton = dcxiosStates(file: "mockdata.json")
     
     @Published var shopList: [Shop]
     @Published var nameFilter: String = ""

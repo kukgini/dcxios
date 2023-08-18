@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct View2: View {
-    @EnvironmentObject var model: ViewModel
+    @EnvironmentObject var model: dcxiosStates
     let item: Shop?
     
     var body: some View {
@@ -38,9 +38,9 @@ struct View2: View {
 
 struct View2_Previews: PreviewProvider {
     static var previews: some View {
-        View2(item: ViewModel.singleton.shopList.first)
-            .environmentObject(ViewModel.singleton)
+        View2(item: dcxiosStates.singleton.shopList.first)
+            .environmentObject(dcxiosStates.singleton)
         View2(item: nil)
-            .environmentObject(ViewModel.singleton)
+            .environmentObject(dcxiosStates.singleton)
     }
 }

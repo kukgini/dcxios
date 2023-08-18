@@ -81,7 +81,7 @@ struct ShopView: View {
 }
 
 struct View1: View {
-    @EnvironmentObject var model: ViewModel
+    @EnvironmentObject var model: dcxiosStates
     @State var isExpanded: Bool
     
     var body: some View {
@@ -122,7 +122,7 @@ struct View1: View {
                 
                 HStack {
                     Button(action: {
-                        API.get(
+                        RestClient.get(
                             url: "https://httpbin.org/get",
                             complition: { result in
                                 switch result {
@@ -137,7 +137,7 @@ struct View1: View {
                     }
                     Text("|")
                     Button(action: {
-                        API.post(
+                        RestClient.post(
                             url: "https://httpbin.org/post",
                             data: ["hello":"world"],
                             complition: { result in
@@ -153,7 +153,7 @@ struct View1: View {
                     }
                     Text("|")
                     Button(action: {
-                        API.get(
+                        RestClient.get(
                             url: "http://localhost:3000/dcx/1/shopList",
                             complition: { result in
                                 switch result {
@@ -200,6 +200,6 @@ struct View1: View {
 struct View1_Previews: PreviewProvider {
     static var previews: some View {
         View1(isExpanded: true)
-            .environmentObject(ViewModel.singleton)
+            .environmentObject(dcxiosStates.singleton)
     }
 }

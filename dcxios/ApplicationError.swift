@@ -1,16 +1,14 @@
-// ApplicationError.swift
-
 import Foundation
 
 enum ApplicationError: LocalizedError {
     case wrap(Error)
-    case custom(String)
+    case withMessage(String)
     
     public var errorDescription: String? {
         switch self {
         case .wrap(let error):
             return error.localizedDescription
-        case .custom(let message):
+        case .withMessage(let message):
             return message
         }
     }
@@ -19,7 +17,7 @@ enum ApplicationError: LocalizedError {
         switch self {
         case .wrap(let origin):
             return (origin as? LocalizedError)?.failureReason
-        case .custom(_):
+        case .withMessage(_):
             return nil
         }
     }

@@ -10,7 +10,7 @@
 		77855EC92A16250100C5A043 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77855EC82A16250100C5A043 /* Shop.swift */; };
 		77A3BACF2A13332700BC2DFF /* CustomDisclosureGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3BACE2A13332700BC2DFF /* CustomDisclosureGroup.swift */; };
 		77A3BAD42A13347E00BC2DFF /* mockdata.json in Resources */ = {isa = PBXBuildFile; fileRef = 77A3BAD32A13347E00BC2DFF /* mockdata.json */; };
-		77A3BAD62A13B15700BC2DFF /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3BAD52A13B15700BC2DFF /* ListItemView.swift */; };
+		77A3BAD62A13B15700BC2DFF /* ChatItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3BAD52A13B15700BC2DFF /* ChatItemView.swift */; };
 		914D7CCB2A0CA2E900ACDA98 /* dcxiosStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914D7CCA2A0CA2E900ACDA98 /* dcxiosStates.swift */; };
 		914D7CCD2A0CA3E600ACDA98 /* View1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914D7CCC2A0CA3E600ACDA98 /* View1.swift */; };
 		914D7CD52A0CA6D700ACDA98 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914D7CD42A0CA6D700ACDA98 /* FavoriteButton.swift */; };
@@ -30,6 +30,9 @@
 		9194FB712A8F43F9003F58A8 /* PopupsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9194FB702A8F43F9003F58A8 /* PopupsList.swift */; };
 		9194FB732A8F442C003F58A8 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9194FB722A8F442C003F58A8 /* Image.swift */; };
 		9194FB752A8F445F003F58A8 /* ActionSheets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9194FB742A8F445F003F58A8 /* ActionSheets.swift */; };
+		9194FB772A8F573A003F58A8 /* ExampleChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9194FB762A8F573A003F58A8 /* ExampleChatView.swift */; };
+		9194FB7A2A8F5AA3003F58A8 /* ExampleRestClientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9194FB792A8F5AA3003F58A8 /* ExampleRestClientView.swift */; };
+		9194FB7C2A8F5C33003F58A8 /* ExampleCustomDisclosureGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9194FB7B2A8F5C33003F58A8 /* ExampleCustomDisclosureGroupView.swift */; };
 		91B9586E2A08BC7800C7F75C /* dcxiosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B9586D2A08BC7800C7F75C /* dcxiosApp.swift */; };
 		91B958702A08BC7900C7F75C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B9586F2A08BC7900C7F75C /* ContentView.swift */; };
 		91B958722A08BC7B00C7F75C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91B958712A08BC7B00C7F75C /* Assets.xcassets */; };
@@ -42,7 +45,7 @@
 		77855EC82A16250100C5A043 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		77A3BACE2A13332700BC2DFF /* CustomDisclosureGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDisclosureGroup.swift; sourceTree = "<group>"; };
 		77A3BAD32A13347E00BC2DFF /* mockdata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mockdata.json; sourceTree = "<group>"; };
-		77A3BAD52A13B15700BC2DFF /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
+		77A3BAD52A13B15700BC2DFF /* ChatItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatItemView.swift; sourceTree = "<group>"; };
 		914D7CCA2A0CA2E900ACDA98 /* dcxiosStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dcxiosStates.swift; sourceTree = "<group>"; };
 		914D7CCC2A0CA3E600ACDA98 /* View1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View1.swift; sourceTree = "<group>"; };
 		914D7CD42A0CA6D700ACDA98 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
@@ -59,6 +62,9 @@
 		9194FB702A8F43F9003F58A8 /* PopupsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupsList.swift; sourceTree = "<group>"; };
 		9194FB722A8F442C003F58A8 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		9194FB742A8F445F003F58A8 /* ActionSheets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheets.swift; sourceTree = "<group>"; };
+		9194FB762A8F573A003F58A8 /* ExampleChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleChatView.swift; sourceTree = "<group>"; };
+		9194FB792A8F5AA3003F58A8 /* ExampleRestClientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleRestClientView.swift; sourceTree = "<group>"; };
+		9194FB7B2A8F5C33003F58A8 /* ExampleCustomDisclosureGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCustomDisclosureGroupView.swift; sourceTree = "<group>"; };
 		91B9586A2A08BC7800C7F75C /* dcxios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dcxios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91B9586D2A08BC7800C7F75C /* dcxiosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dcxiosApp.swift; sourceTree = "<group>"; };
 		91B9586F2A08BC7900C7F75C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -111,8 +117,13 @@
 		914D7CD12A0CA68600ACDA98 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
-				9194FB5D2A8F3EBC003F58A8 /* Popup */,
+				9194FB782A8F5813003F58A8 /* ExampleChatStuffs */,
+				9194FB5D2A8F3EBC003F58A8 /* ExamplePopupStuffs */,
 				914D7CCC2A0CA3E600ACDA98 /* View1.swift */,
+				9194FB5B2A8F3BED003F58A8 /* ExamplePopupView.swift */,
+				9194FB762A8F573A003F58A8 /* ExampleChatView.swift */,
+				9194FB792A8F5AA3003F58A8 /* ExampleRestClientView.swift */,
+				9194FB7B2A8F5C33003F58A8 /* ExampleCustomDisclosureGroupView.swift */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -126,10 +137,9 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		9194FB5D2A8F3EBC003F58A8 /* Popup */ = {
+		9194FB5D2A8F3EBC003F58A8 /* ExamplePopupStuffs */ = {
 			isa = PBXGroup;
 			children = (
-				9194FB5B2A8F3BED003F58A8 /* ExamplePopupView.swift */,
 				9194FB5E2A8F3F33003F58A8 /* FloatsBig.swift */,
 				9194FB602A8F3F5D003F58A8 /* FloatsSmall.swift */,
 				9194FB6C2A8F4316003F58A8 /* Toasts.swift */,
@@ -139,7 +149,15 @@
 				9194FB622A8F40CC003F58A8 /* PopupButton.swift */,
 				9194FB722A8F442C003F58A8 /* Image.swift */,
 			);
-			path = Popup;
+			path = ExamplePopupStuffs;
+			sourceTree = "<group>";
+		};
+		9194FB782A8F5813003F58A8 /* ExampleChatStuffs */ = {
+			isa = PBXGroup;
+			children = (
+				77A3BAD52A13B15700BC2DFF /* ChatItemView.swift */,
+			);
+			path = ExampleChatStuffs;
 			sourceTree = "<group>";
 		};
 		91998EF82A11E88E003C09BE /* Components */ = {
@@ -147,7 +165,6 @@
 			children = (
 				77A3BACE2A13332700BC2DFF /* CustomDisclosureGroup.swift */,
 				914D7CD42A0CA6D700ACDA98 /* FavoriteButton.swift */,
-				77A3BAD52A13B15700BC2DFF /* ListItemView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -298,10 +315,12 @@
 				9194FB712A8F43F9003F58A8 /* PopupsList.swift in Sources */,
 				9194FB732A8F442C003F58A8 /* Image.swift in Sources */,
 				9194FB5A2A8F3B06003F58A8 /* Color.swift in Sources */,
+				9194FB7A2A8F5AA3003F58A8 /* ExampleRestClientView.swift in Sources */,
+				9194FB7C2A8F5C33003F58A8 /* ExampleCustomDisclosureGroupView.swift in Sources */,
 				914D7CD52A0CA6D700ACDA98 /* FavoriteButton.swift in Sources */,
 				9194FB632A8F40CC003F58A8 /* PopupButton.swift in Sources */,
 				77A3BACF2A13332700BC2DFF /* CustomDisclosureGroup.swift in Sources */,
-				77A3BAD62A13B15700BC2DFF /* ListItemView.swift in Sources */,
+				77A3BAD62A13B15700BC2DFF /* ChatItemView.swift in Sources */,
 				9194FB692A8F425D003F58A8 /* RoundedCorner.swift in Sources */,
 				914D7CCB2A0CA2E900ACDA98 /* dcxiosStates.swift in Sources */,
 				91E77FD52A0E1EBC0039AD1E /* RestClient.swift in Sources */,
@@ -309,6 +328,7 @@
 				914D7CCD2A0CA3E600ACDA98 /* View1.swift in Sources */,
 				9194FB6D2A8F4316003F58A8 /* Toasts.swift in Sources */,
 				9194FB6B2A8F42BD003F58A8 /* Constants.swift in Sources */,
+				9194FB772A8F573A003F58A8 /* ExampleChatView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -108,7 +108,6 @@ struct ShopDetailView: View {
 
 struct View1: View {
     @EnvironmentObject var model: dcxiosStates
-    @State var isExpanded: Bool
     
     var body: some View {
         NavigationView {
@@ -138,46 +137,7 @@ struct View1: View {
                     }
                 }
                 
-                ForEach(1..<5) { index in
-                    if index % 2 != 0 {
-                        ListItemView(alignment: .left, title: "Title \(index)", description: "BlaBla... \(index)")
-                    } else {
-                        ListItemView(alignment: .right, title: "Title \(index)", description: "BlaBla... \(index)")
-                    }
-                }
-                
-                HStack {
-                    Button(action: {
-                        RestClient.get(
-                            url: "https://httpbin.org/get",
-                            complition: { result in
-                                switch result {
-                                case .success(let json):
-                                    print("\(json)")
-                                case .failure(let error):
-                                    print("\(error.localizedDescription)")
-                                }
-                            })
-                    }) {
-                        Text("GET")
-                    }
-                    Text("|")
-                    Button(action: {
-                        RestClient.post(
-                            url: "https://httpbin.org/post",
-                            data: ["hello":"world"],
-                            complition: { result in
-                                switch result {
-                                case .success(let json):
-                                    print("Hello \(json["json"]["hello"].stringValue)!")
-                                case .failure(let error):
-                                    print("\(error.localizedDescription)")
-                                }
-                            })
-                    }) {
-                        Text("POST")
-                    }
-                    Text("|")
+                HStack(alignment: .center) {
                     Button(action: {
                         RestClient.get(
                             url: "http://localhost:3000/dcx/1/shopList",
@@ -195,24 +155,10 @@ struct View1: View {
                                 }
                             })
                     }) {
-                        Text("SHOP LIST")
+                        Text("FETCH SHOP LIST")
                     }
-                }
-                Spacer()
-                CustomDisclosureGroup(isExpanded: $isExpanded) {
-                    isExpanded.toggle()
-                } prompt: {
-                    HStack(spacing: 0) {
-                        Text("How to open an account in your application?")
-                        Spacer()
-                        Text(">")
-                            .fontWeight(.bold)
-                            .rotationEffect(isExpanded ? Angle(degrees: 90) : .zero)
-                    }
-                    .padding(.horizontal, 20)
-                } expandedView: {
-                    Text("you can open an account by choosing between gmail or ICloud when opening the application")
-                        .font(.system(size: 16, weight: .semibold, design: .monospaced))
+                    .buttonStyle(.bordered)
+                    .buttonBorderShape(.roundedRectangle)
                 }
             }
             .navigationBarTitle("View1")
@@ -225,7 +171,7 @@ struct View1: View {
 
 struct View1_Previews: PreviewProvider {
     static var previews: some View {
-        View1(isExpanded: true)
+        View1()
             .environmentObject(dcxiosStates.singleton)
     }
 }

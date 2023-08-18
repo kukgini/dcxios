@@ -6,7 +6,7 @@ enum ListItemAlignment {
     case right
 }
 
-struct ListItemView: View {
+struct ChatItemView: View {
     var alignment: ListItemAlignment
     var title: String
     var description: String
@@ -47,9 +47,9 @@ struct ListItemView: View {
 }
 
 
-struct ListItemView_Previews: PreviewProvider {
+struct ChatItemView_Previews: PreviewProvider {
     static var previews: some View {
-        ListItemView(alignment: .left, title: "Title", description: "Description")
-        ListItemView(alignment: .right, title: "Title", description: "Description")
+        ChatItemView(alignment: .left, title: "Title", description: "Description")
+        ChatItemView(alignment: .right, title: "Title", description: "Description")
     }
 }

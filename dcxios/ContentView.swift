@@ -4,8 +4,11 @@ struct ContentView: View {
     @EnvironmentObject var model: dcxiosStates
     
     var body: some View {
-//        View1(isExpanded: false)
-        ExamplePopupView()
+        View1()
+//        ExampleChatView()
+//        ExamplePopupView()
+//        ExampleRestClientView()
+//        ExampleCustomDisclosureGroupView(isExpanded: true)
     }
 }
 

@@ -17,6 +17,8 @@
 		914D7CD52A0CA6D700ACDA98 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914D7CD42A0CA6D700ACDA98 /* FavoriteButton.swift */; };
 		9194FB512A8E45AE003F58A8 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 9194FB502A8E45AE003F58A8 /* SwiftyJSON */; };
 		9194FB542A8E45C4003F58A8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9194FB532A8E45C4003F58A8 /* Alamofire */; };
+		9194FB572A8F3AB5003F58A8 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 9194FB562A8F3AB5003F58A8 /* PopupView */; };
+		9194FB5A2A8F3B06003F58A8 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9194FB592A8F3B06003F58A8 /* Color.swift */; };
 		91B9586E2A08BC7800C7F75C /* dcxiosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B9586D2A08BC7800C7F75C /* dcxiosApp.swift */; };
 		91B958702A08BC7900C7F75C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B9586F2A08BC7900C7F75C /* ContentView.swift */; };
 		91B958722A08BC7B00C7F75C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91B958712A08BC7B00C7F75C /* Assets.xcassets */; };
@@ -34,6 +36,7 @@
 		914D7CCC2A0CA3E600ACDA98 /* View1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View1.swift; sourceTree = "<group>"; };
 		914D7CCE2A0CA3F400ACDA98 /* View2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View2.swift; sourceTree = "<group>"; };
 		914D7CD42A0CA6D700ACDA98 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
+		9194FB592A8F3B06003F58A8 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		91B9586A2A08BC7800C7F75C /* dcxios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dcxios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91B9586D2A08BC7800C7F75C /* dcxiosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dcxiosApp.swift; sourceTree = "<group>"; };
 		91B9586F2A08BC7900C7F75C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9194FB572A8F3AB5003F58A8 /* PopupView in Frameworks */,
 				9194FB512A8E45AE003F58A8 /* SwiftyJSON in Frameworks */,
 				9194FB542A8E45C4003F58A8 /* Alamofire in Frameworks */,
 			);
@@ -91,6 +95,14 @@
 			path = Example;
 			sourceTree = "<group>";
 		};
+		9194FB582A8F3ADE003F58A8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9194FB592A8F3B06003F58A8 /* Color.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		91998EF82A11E88E003C09BE /* Component */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +141,7 @@
 				914D7CC72A0CA2A400ACDA98 /* Views */,
 				914D7CC82A0CA2B600ACDA98 /* Models */,
 				91E77FD62A0E22290039AD1E /* Utils */,
+				9194FB582A8F3ADE003F58A8 /* Extensions */,
 				91B958712A08BC7B00C7F75C /* Assets.xcassets */,
 				91B958732A08BC7B00C7F75C /* Preview Content */,
 			);
@@ -170,6 +183,7 @@
 			packageProductDependencies = (
 				9194FB502A8E45AE003F58A8 /* SwiftyJSON */,
 				9194FB532A8E45C4003F58A8 /* Alamofire */,
+				9194FB562A8F3AB5003F58A8 /* PopupView */,
 			);
 			productName = dcxios;
 			productReference = 91B9586A2A08BC7800C7F75C /* dcxios.app */;
@@ -202,6 +216,7 @@
 			packageReferences = (
 				9194FB4F2A8E45AE003F58A8 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				9194FB522A8E45C4003F58A8 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				9194FB552A8F3AB5003F58A8 /* XCRemoteSwiftPackageReference "PopupView" */,
 			);
 			productRefGroup = 91B9586B2A08BC7800C7F75C /* Products */;
 			projectDirPath = "";
@@ -235,6 +250,7 @@
 				914D7CCF2A0CA3F400ACDA98 /* View2.swift in Sources */,
 				91B9586E2A08BC7800C7F75C /* dcxiosApp.swift in Sources */,
 				77855EC92A16250100C5A043 /* Shop.swift in Sources */,
+				9194FB5A2A8F3B06003F58A8 /* Color.swift in Sources */,
 				914D7CD52A0CA6D700ACDA98 /* FavoriteButton.swift in Sources */,
 				77A3BACF2A13332700BC2DFF /* CustomDisclosureGroup.swift in Sources */,
 				77A3BAD62A13B15700BC2DFF /* ListItemView.swift in Sources */,
@@ -469,6 +485,14 @@
 				version = 5.7.1;
 			};
 		};
+		9194FB552A8F3AB5003F58A8 /* XCRemoteSwiftPackageReference "PopupView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/PopupView";
+			requirement = {
+				kind = exactVersion;
+				version = 2.6.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -481,6 +505,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9194FB522A8E45C4003F58A8 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		9194FB562A8F3AB5003F58A8 /* PopupView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9194FB552A8F3AB5003F58A8 /* XCRemoteSwiftPackageReference "PopupView" */;
+			productName = PopupView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

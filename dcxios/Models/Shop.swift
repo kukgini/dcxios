@@ -1,7 +1,7 @@
 
 import Foundation
 
-public struct Shop: Codable, Identifiable {
+public struct Shop: Codable, Equatable, Identifiable {
     public var id: Int
     public var category: Category
     public var name: String

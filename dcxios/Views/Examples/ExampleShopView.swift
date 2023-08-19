@@ -139,15 +139,16 @@ struct ExampleShopView: View {
                         ShopItemView(shop: shop)
                     }
                 }
+                .onDelete(perform: deleteShop)
             }
             .navigationBarTitle("View1")
             .navigationBarItems(
                 leading: Text("A"),
-                trailing: fetchButton())
+                trailing: updateButton())
         }
     }
     
-    func fetchButton() -> some View {
+    func updateButton() -> some View {
         Button(action: {
             RestClient.get(
                 url: "http://localhost:3000/dcx/1/shopList",
@@ -168,5 +169,12 @@ struct ExampleShopView: View {
         }) {
             Text("Update")
         }
+    }
+    
+    func deleteShop(at index: IndexSet) {
+        let selectedIndex = index.first!
+        let selectedShop = appStates.filteredShops[selectedIndex]
+        let targetIndex = appStates.allShops.firstIndex(of: selectedShop)
+        appStates.allShops.remove(at: targetIndex!)
     }
 }

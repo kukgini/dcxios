@@ -114,6 +114,12 @@ struct View1: View {
         NavigationView {
             List {
                 VStack(alignment: .center) {
+                    HStack {
+                        SearchBar(complition: { newNameFilter in
+                            print("searching... \(newNameFilter)")
+                            self.model.nameFilter = newNameFilter
+                        })
+                    }
                     HStack(alignment: .center) {
                         FavoriteButton(isSet: $model.adFilter)
                         CategoryFilterButton(label: "전체", filter: $model.categoryFilter, category: nil)
@@ -127,13 +133,6 @@ struct View1: View {
                         SortButton(label: "기본 정렬순", option: $model.sortOption, key: .basic)
                         SortButton(label: "별점 높은순", option: $model.sortOption, key: .point)
                         SortButton(label: "리뷰 많은순", option: $model.sortOption, key: .review)
-                    }
-                    HStack {
-                        SearchBar(text: self.model.nameFilter, complition: { name in
-                            print("searching... \(model.nameFilter)")
-                            self.model.nameFilter = name
-                            
-                        })
                     }
                 }
                 ForEach(model.filteredShops) { shop in
@@ -170,12 +169,5 @@ struct View1: View {
         }) {
             Text("Update")
         }
-    }
-}
-
-struct View1_Previews: PreviewProvider {
-    static var previews: some View {
-        View1()
-            .environmentObject(dcxiosStates.singleton)
     }
 }

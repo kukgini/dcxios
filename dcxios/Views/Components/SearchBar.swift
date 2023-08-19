@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct SearchBar: View {
-    @State var text: String
+    @State var text: String = ""
     var complition: (String) -> Void
     @State private var isEditing = false
         
@@ -26,9 +26,9 @@ struct SearchBar: View {
                                 self.hideKeyboard()
                                 self.complition(self.text)
                             }) {
-                                Image(systemName: "checkmark")
-                                    .foregroundColor(.gray)
-                                    .padding(.trailing, 8)
+                                Image(systemName: "checkmark.circle.fill")
+                                    .foregroundColor(.green)
+                                    .padding(.trailing, 1)
                             }
                             .buttonStyle(BorderlessButtonStyle())
                         }
@@ -40,7 +40,7 @@ struct SearchBar: View {
                                 self.complition(self.text)
                             }) {
                                 Image(systemName: "multiply.circle.fill")
-                                    .foregroundColor(.gray)
+                                    .foregroundColor(.red)
                                     .padding(.trailing, 8)
                             }
                             .buttonStyle(BorderlessButtonStyle())

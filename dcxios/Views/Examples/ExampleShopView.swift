@@ -55,18 +55,21 @@ struct ShopItemView: View {
     
     var body: some View {
         HStack {
-            VStack (alignment: .leading){
+            VStack (alignment: .leading, spacing: 0){
                 HStack {
                     Text(shop.name)
                     if shop.adFlag == "Y" {
                         Image(systemName: "star.fill")
                     }
+                    Spacer() // need for left alignment
                 }
                 HStack {
                     Text(String(shop.point))
                     Text(String(shop.review))
+                    Spacer() // need for left alignment
                 }
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
     }
 }
@@ -112,7 +115,7 @@ struct ExampleShopView: View {
     var body: some View {
         NavigationView {
             List {
-                VStack(alignment: .center) {
+                VStack {
                     HStack {
                         SearchBar(complition: { newNameFilter in
                             print("searching... \(newNameFilter)")
@@ -134,9 +137,10 @@ struct ExampleShopView: View {
                         ShopSortButton(label: "리뷰 많은순", option: $appStates.sortOption, key: .review)
                     }
                 }
-                ForEach(appStates.filteredShops) { shop in
+                ForEach(Array(appStates.filteredShops.enumerated()), id: \.1.id) { (index, shop) in
                     NavigationLink(destination: ShopDetailView(item: shop)) {
                         ShopItemView(shop: shop)
+                            .background(index % 2 == 0 ? Color.white : Color.purple)
                     }
                 }
                 .onDelete(perform: deleteShop)
@@ -176,5 +180,10 @@ struct ExampleShopView: View {
         let selectedShop = appStates.filteredShops[selectedIndex]
         let targetIndex = appStates.allShops.firstIndex(of: selectedShop)
         appStates.allShops.remove(at: targetIndex!)
+        
+        // you can use multiple selected items with this
+        // offsets.sorted(by: >).forEach { i in
+        //     //...
+        // }
     }
 }

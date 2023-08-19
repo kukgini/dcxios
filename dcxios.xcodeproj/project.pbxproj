@@ -10,7 +10,6 @@
 		77855EC92A16250100C5A043 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77855EC82A16250100C5A043 /* Shop.swift */; };
 		77A3BACF2A13332700BC2DFF /* CustomDisclosureGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3BACE2A13332700BC2DFF /* CustomDisclosureGroup.swift */; };
 		77A3BAD42A13347E00BC2DFF /* mockdata.json in Resources */ = {isa = PBXBuildFile; fileRef = 77A3BAD32A13347E00BC2DFF /* mockdata.json */; };
-		77A3BAD62A13B15700BC2DFF /* ChatItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3BAD52A13B15700BC2DFF /* ChatItemView.swift */; };
 		914D7CCB2A0CA2E900ACDA98 /* ApplicationStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914D7CCA2A0CA2E900ACDA98 /* ApplicationStates.swift */; };
 		914D7CCD2A0CA3E600ACDA98 /* ExampleShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914D7CCC2A0CA3E600ACDA98 /* ExampleShopView.swift */; };
 		914D7CD52A0CA6D700ACDA98 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914D7CD42A0CA6D700ACDA98 /* FavoriteButton.swift */; };
@@ -46,7 +45,6 @@
 		77855EC82A16250100C5A043 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		77A3BACE2A13332700BC2DFF /* CustomDisclosureGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDisclosureGroup.swift; sourceTree = "<group>"; };
 		77A3BAD32A13347E00BC2DFF /* mockdata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mockdata.json; sourceTree = "<group>"; };
-		77A3BAD52A13B15700BC2DFF /* ChatItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatItemView.swift; sourceTree = "<group>"; };
 		914D7CCA2A0CA2E900ACDA98 /* ApplicationStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationStates.swift; sourceTree = "<group>"; };
 		914D7CCC2A0CA3E600ACDA98 /* ExampleShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleShopView.swift; sourceTree = "<group>"; };
 		914D7CD42A0CA6D700ACDA98 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
@@ -119,7 +117,6 @@
 		914D7CD12A0CA68600ACDA98 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
-				9194FB782A8F5813003F58A8 /* ExampleChatStuffs */,
 				9194FB5D2A8F3EBC003F58A8 /* ExamplePopupStuffs */,
 				914D7CCC2A0CA3E600ACDA98 /* ExampleShopView.swift */,
 				9194FB5B2A8F3BED003F58A8 /* ExamplePopupView.swift */,
@@ -152,14 +149,6 @@
 				9194FB722A8F442C003F58A8 /* Image.swift */,
 			);
 			path = ExamplePopupStuffs;
-			sourceTree = "<group>";
-		};
-		9194FB782A8F5813003F58A8 /* ExampleChatStuffs */ = {
-			isa = PBXGroup;
-			children = (
-				77A3BAD52A13B15700BC2DFF /* ChatItemView.swift */,
-			);
-			path = ExampleChatStuffs;
 			sourceTree = "<group>";
 		};
 		91998EF82A11E88E003C09BE /* Components */ = {
@@ -324,7 +313,6 @@
 				914D7CD52A0CA6D700ACDA98 /* FavoriteButton.swift in Sources */,
 				9194FB632A8F40CC003F58A8 /* PopupButton.swift in Sources */,
 				77A3BACF2A13332700BC2DFF /* CustomDisclosureGroup.swift in Sources */,
-				77A3BAD62A13B15700BC2DFF /* ChatItemView.swift in Sources */,
 				9194FB692A8F425D003F58A8 /* RoundedCorner.swift in Sources */,
 				914D7CCB2A0CA2E900ACDA98 /* ApplicationStates.swift in Sources */,
 				91E77FD52A0E1EBC0039AD1E /* RestClient.swift in Sources */,

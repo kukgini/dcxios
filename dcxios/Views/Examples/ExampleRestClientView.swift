@@ -3,8 +3,6 @@
 import SwiftUI
 
 struct ExampleRestClientView: View {
-    @EnvironmentObject var model: dcxiosStates
-    
     var body: some View {
         VStack(alignment: .center) {
             Button(action: {

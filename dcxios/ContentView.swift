@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var model: dcxiosStates
+    @EnvironmentObject var appStates: dcxiosStates
     
     var body: some View {
         View1()

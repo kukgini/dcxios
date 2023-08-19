@@ -72,7 +72,6 @@ struct ShopView: View {
 }
 
 struct ShopDetailView: View {
-    @EnvironmentObject var model: dcxiosStates
     let item: Shop?
     
     var body: some View {
@@ -108,7 +107,7 @@ struct ShopDetailView: View {
 }
 
 struct View1: View {
-    @EnvironmentObject var model: dcxiosStates
+    @EnvironmentObject var appStates: dcxiosStates
     
     var body: some View {
         NavigationView {
@@ -117,25 +116,25 @@ struct View1: View {
                     HStack {
                         SearchBar(complition: { newNameFilter in
                             print("searching... \(newNameFilter)")
-                            self.model.nameFilter = newNameFilter
+                            self.appStates.nameFilter = newNameFilter
                         })
                     }
                     HStack(alignment: .center) {
-                        FavoriteButton(isSet: $model.adFilter)
-                        CategoryFilterButton(label: "전체", filter: $model.categoryFilter, category: nil)
-                        CategoryFilterButton(label: "치킨", filter: $model.categoryFilter, category: .chicken)
-                        CategoryFilterButton(label: "피자", filter: $model.categoryFilter, category: .pizza)
-                        CategoryFilterButton(label: "분식", filter: $model.categoryFilter, category: .bunsik)
-                        CategoryFilterButton(label: "카페", filter: $model.categoryFilter, category: .caffee)
+                        FavoriteButton(isSet: $appStates.adFilter)
+                        CategoryFilterButton(label: "전체", filter: $appStates.categoryFilter, category: nil)
+                        CategoryFilterButton(label: "치킨", filter: $appStates.categoryFilter, category: .chicken)
+                        CategoryFilterButton(label: "피자", filter: $appStates.categoryFilter, category: .pizza)
+                        CategoryFilterButton(label: "분식", filter: $appStates.categoryFilter, category: .bunsik)
+                        CategoryFilterButton(label: "카페", filter: $appStates.categoryFilter, category: .caffee)
                         
                     }
                     HStack(alignment: .center) {
-                        SortButton(label: "기본 정렬순", option: $model.sortOption, key: .basic)
-                        SortButton(label: "별점 높은순", option: $model.sortOption, key: .point)
-                        SortButton(label: "리뷰 많은순", option: $model.sortOption, key: .review)
+                        SortButton(label: "기본 정렬순", option: $appStates.sortOption, key: .basic)
+                        SortButton(label: "별점 높은순", option: $appStates.sortOption, key: .point)
+                        SortButton(label: "리뷰 많은순", option: $appStates.sortOption, key: .review)
                     }
                 }
-                ForEach(model.filteredShops) { shop in
+                ForEach(appStates.filteredShops) { shop in
                     NavigationLink(destination: ShopDetailView(item: shop)) {
                         ShopView(shop: shop)
                     }
@@ -157,8 +156,8 @@ struct View1: View {
                     case .success(let json):
                         do {
                             print(json["shopList"])
-                            model.allShops = try decode(json["shopList"].rawData())
-                            model.dirty = true
+                            appStates.allShops = try decode(json["shopList"].rawData())
+                            appStates.dirty = true
                         } catch {
                             print("GET shopList failed. \(error)")
                         }

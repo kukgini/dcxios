@@ -6,7 +6,7 @@ import LocalAuthentication
 struct dcxiosApp: App {
     let logger = Logger(subsystem: "dcxios", category: "App")
     
-    @StateObject private var model = dcxiosStates.singleton
+    @StateObject private var appStates = dcxiosStates.singleton
     @State var authorized = false
     @State var error: LocalizedError?
     @State var showError: Bool = false
@@ -15,7 +15,7 @@ struct dcxiosApp: App {
         WindowGroup {
             if authorized {
                 ContentView()
-                    .environmentObject(model)
+                    .environmentObject(appStates)
             } else {
                 Button(action: authorize) {
                     Text("Authorize")

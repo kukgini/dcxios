@@ -3,7 +3,6 @@
 import SwiftUI
 
 struct ExampleCustomDisclosureGroupView: View {
-    @EnvironmentObject var model: dcxiosStates
     @State var isExpanded: Bool
     
     var body: some View {

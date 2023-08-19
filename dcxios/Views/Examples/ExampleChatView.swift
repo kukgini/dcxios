@@ -1,9 +1,7 @@
 import Foundation
 import SwiftUI
 
-struct ExampleChatView: View {
-    @EnvironmentObject var model: dcxiosStates
-    
+struct ExampleChatView: View {    
     var body: some View {
         NavigationView {
             List {

@@ -15,8 +15,8 @@ public enum SortOption: String, Codable, Hashable {
     case review = "review"
 }
 
-final class dcxiosStates: ObservableObject {
-    public static let singleton = dcxiosStates(file: "mockdata.json")
+final class ApplicationStates: ObservableObject {
+    public static let singleton = ApplicationStates(file: "mockdata.json")
     
     @Published var allShops: [Shop]
     @Published var dirty: Bool = false

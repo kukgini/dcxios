@@ -6,7 +6,7 @@ import LocalAuthentication
 struct dcxiosApp: App {
     let logger = Logger(subsystem: "dcxios", category: "App")
     
-    @StateObject private var appStates = dcxiosStates.singleton
+    @StateObject private var appStates = ApplicationStates.singleton
     @State var authorized = false
     @State var error: LocalizedError?
     @State var showError: Bool = false

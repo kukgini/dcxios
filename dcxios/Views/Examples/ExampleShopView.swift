@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct CategoryFilterButton: View {
+struct ShopCategoryFilterButton: View {
     var label: String
     @Binding var filter: Category?
     var category: Category?
@@ -25,7 +25,7 @@ struct CategoryFilterButton: View {
     }
 }
 
-struct SortButton: View {
+struct ShopSortButton: View {
     var label: String
     @Binding var option: SortOption
     var key: SortOption
@@ -50,7 +50,7 @@ struct SortButton: View {
     }
 }
 
-struct ShopView: View {
+struct ShopItemView: View {
     var shop: Shop
     
     var body: some View {
@@ -106,8 +106,8 @@ struct ShopDetailView: View {
     }
 }
 
-struct View1: View {
-    @EnvironmentObject var appStates: dcxiosStates
+struct ExampleShopView: View {
+    @EnvironmentObject var appStates: ApplicationStates
     
     var body: some View {
         NavigationView {
@@ -121,22 +121,22 @@ struct View1: View {
                     }
                     HStack(alignment: .center) {
                         FavoriteButton(isSet: $appStates.adFilter)
-                        CategoryFilterButton(label: "전체", filter: $appStates.categoryFilter, category: nil)
-                        CategoryFilterButton(label: "치킨", filter: $appStates.categoryFilter, category: .chicken)
-                        CategoryFilterButton(label: "피자", filter: $appStates.categoryFilter, category: .pizza)
-                        CategoryFilterButton(label: "분식", filter: $appStates.categoryFilter, category: .bunsik)
-                        CategoryFilterButton(label: "카페", filter: $appStates.categoryFilter, category: .caffee)
+                        ShopCategoryFilterButton(label: "전체", filter: $appStates.categoryFilter, category: nil)
+                        ShopCategoryFilterButton(label: "치킨", filter: $appStates.categoryFilter, category: .chicken)
+                        ShopCategoryFilterButton(label: "피자", filter: $appStates.categoryFilter, category: .pizza)
+                        ShopCategoryFilterButton(label: "분식", filter: $appStates.categoryFilter, category: .bunsik)
+                        ShopCategoryFilterButton(label: "카페", filter: $appStates.categoryFilter, category: .caffee)
                         
                     }
                     HStack(alignment: .center) {
-                        SortButton(label: "기본 정렬순", option: $appStates.sortOption, key: .basic)
-                        SortButton(label: "별점 높은순", option: $appStates.sortOption, key: .point)
-                        SortButton(label: "리뷰 많은순", option: $appStates.sortOption, key: .review)
+                        ShopSortButton(label: "기본 정렬순", option: $appStates.sortOption, key: .basic)
+                        ShopSortButton(label: "별점 높은순", option: $appStates.sortOption, key: .point)
+                        ShopSortButton(label: "리뷰 많은순", option: $appStates.sortOption, key: .review)
                     }
                 }
                 ForEach(appStates.filteredShops) { shop in
                     NavigationLink(destination: ShopDetailView(item: shop)) {
-                        ShopView(shop: shop)
+                        ShopItemView(shop: shop)
                     }
                 }
             }

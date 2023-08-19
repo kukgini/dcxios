@@ -16,12 +16,6 @@ struct FavoriteButton: View {
         // [Important] buttonStyle needed for SwiftUI bug:
         // https://stackoverflow.com/questions/63087817/strange-buttons-behaviour-in-a-list-swiftui
         .buttonStyle(BorderlessButtonStyle())
-//        .padding(10)
-//        .overlay(
-//            RoundedRectangle(cornerRadius: 10)
-//                .stroke(lineWidth: 0)
-//                .foregroundColor(Color.blue)
-//        )
     }
 }
 

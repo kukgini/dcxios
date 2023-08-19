@@ -1,10 +1,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var appStates: dcxiosStates
+    @EnvironmentObject var appStates: ApplicationStates
     
     var body: some View {
-        View1()
+        ExampleShopView()
 //        ExampleChatView()
 //        ExamplePopupView()
 //        ExampleRestClientView()
@@ -15,6 +15,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(dcxiosStates.singleton)
+            .environmentObject(ApplicationStates.singleton)
     }
 }

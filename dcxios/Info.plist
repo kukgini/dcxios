@@ -14,5 +14,10 @@
 	</array>
 	<key>UIFileSharingEnabled</key>
 	<true/>
+	<key>BGTaskSchedulerPermittedIdentifiers</key>
+	<array>
+		<string>kukgini.dcxios_refreshbadge</string>
+		<string>kukgini.dcxios_refreshprocess</string>
+	</array>
 </dict>
 </plist>

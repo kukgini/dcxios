@@ -129,7 +129,11 @@ struct View1: View {
                         SortButton(label: "리뷰 많은순", option: $model.sortOption, key: .review)
                     }
                     HStack {
-                        SearchBar(text: $model.nameFilter)
+                        SearchBar(text: self.model.nameFilter, complition: { name in
+                            print("searching... \(model.nameFilter)")
+                            self.model.nameFilter = name
+                            
+                        })
                     }
                 }
                 ForEach(model.filteredShops) { shop in
@@ -154,7 +158,8 @@ struct View1: View {
                     case .success(let json):
                         do {
                             print(json["shopList"])
-                            model.shopList = try decode(json["shopList"].rawData())
+                            model.allShops = try decode(json["shopList"].rawData())
+                            model.dirty = true
                         } catch {
                             print("GET shopList failed. \(error)")
                         }

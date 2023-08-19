@@ -18,7 +18,8 @@ public enum SortOption: String, Codable, Hashable {
 final class dcxiosStates: ObservableObject {
     public static let singleton = dcxiosStates(file: "mockdata.json")
     
-    @Published var shopList: [Shop]
+    @Published var allShops: [Shop]
+    @Published var dirty: Bool = false
     @Published var nameFilter: String = ""
     @Published var adFilter: Bool = false
     @Published var categoryFilter: Category? = nil
@@ -26,40 +27,43 @@ final class dcxiosStates: ObservableObject {
         didSet {
             switch sortOption {
                 case .basic:
-                    shopList.sort(by: {$0.id < $1.id})
+                    allShops.sort(by: {$0.id < $1.id})
                 case .point:
-                    shopList.sort(by: {$0.point < $1.point})
+                    allShops.sort(by: {$0.point < $1.point})
                 case .review:
-                    shopList.sort(by: {$0.review < $1.review})
+                    allShops.sort(by: {$0.review < $1.review})
             }
+        }
+    }
+    
+    var filteredShops: [Shop] {
+        return self.allShops.filter { shop in
+            var result: Bool = true
+            if self.adFilter {
+                print("filter ad.")
+                result = result && (shop.adFlag == "Y")
+            }
+            if let filter = self.categoryFilter {
+                print("filter category.")
+                result = result && (shop.category == filter)
+            }
+            if self.nameFilter.utf8.count > 1 {
+                print("filter name.")
+                result = result && (shop.name.localizedStandardContains(self.nameFilter))
+            }
+            return result
         }
     }
     
     public init(file: String) {
-        self.shopList = load(file)
+        self.allShops = load(file)
     }
 
     var categories: [String: [Shop]] {
         Dictionary(
-            grouping: shopList,
+            grouping: allShops,
             by: { $0.category.rawValue }
         )
-    }
-    
-    var filteredShops: [Shop] {
-        self.shopList.filter { shop in
-            var result: Bool = true
-            if self.adFilter {
-                result = result && (shop.adFlag == "Y")
-            }
-            if let filter = self.categoryFilter {
-                result = result && (shop.category == filter)
-            }
-            if self.nameFilter.count > 1 {
-                result = result && (shop.name.contains(self.nameFilter))
-            }
-            return result
-        }
     }
 }
 

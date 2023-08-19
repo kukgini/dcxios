@@ -29,11 +29,18 @@ extension View {
         )
     }
 
-#if os(iOS)
+    #if os(iOS)
     func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
         clipShape(RoundedCorner(radius: radius, corners: corners))
     }
-#endif
+    #endif
+    
+    //화면 터치시 키보드 숨김
+    #if canImport(UIKit)
+    func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+    #endif
 }
 
 private struct ExampleButtonStyle: ButtonStyle {

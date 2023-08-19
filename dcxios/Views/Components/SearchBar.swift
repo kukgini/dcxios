@@ -48,8 +48,13 @@ struct SearchBar: View {
                     }
                 )
                 .padding(.horizontal, 10)
+                .disableAutocorrection(true)
+                .textInputAutocapitalization(.never)
                 .onTapGesture {
                     self.isEditing = true
+                }
+                .onSubmit {
+                    self.complition(self.text)
                 }
         }
     }

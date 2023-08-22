@@ -2,7 +2,6 @@ import SwiftUI
 import LocalAuthentication
 
 struct ExampleBiometricAuth: View {
-    
     @State var authorized = false
     @State var error: Error?
     @State var showError: Bool = false
@@ -15,15 +14,11 @@ struct ExampleBiometricAuth: View {
                 Button(action: authorize) {
                     Text("Authorize")
                 }
-                .alert(isPresented: $showError, content: showAuthorizeFailedAlert)
+                .alert(isPresented: $showError, content: {
+                    alertError(err: $error)
+                })
             }
         }
-    }
-    
-    func showAuthorizeFailedAlert() -> Alert {
-        return Alert(title: Text("Alert"),
-                     message: Text("\(error?.localizedDescription ?? "")"),
-                     dismissButton: .default(Text("확인")))
     }
     
     func authorize() {

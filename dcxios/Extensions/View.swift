@@ -2,6 +2,13 @@ import SwiftUI
 
 extension View {
     
+    func alertError(err: Binding<Error?>) -> Alert {
+        let error: Error? = err.wrappedValue
+        return Alert(title: Text("오류"),
+                     message: Text("\(error?.localizedDescription ?? "")"),
+                     dismissButton: .default(Text("확인")))
+    }
+    
     @ViewBuilder
     func applyIf<T: View>(_ condition: Bool, apply: (Self) -> T) -> some View {
         if condition {

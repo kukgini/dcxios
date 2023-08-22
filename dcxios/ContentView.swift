@@ -9,6 +9,7 @@ struct ContentView: View {
 //        ExamplePopupView()
 //        ExampleRestClientView()
 //        ExampleCustomDisclosureGroupView(isExpanded: true)
+//        ExampleBiometricAuth()
     }
 }
 

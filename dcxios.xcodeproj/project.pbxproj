@@ -13,6 +13,7 @@
 		914D7CCB2A0CA2E900ACDA98 /* ApplicationStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914D7CCA2A0CA2E900ACDA98 /* ApplicationStates.swift */; };
 		914D7CCD2A0CA3E600ACDA98 /* ExampleShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914D7CCC2A0CA3E600ACDA98 /* ExampleShopView.swift */; };
 		914D7CD52A0CA6D700ACDA98 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914D7CD42A0CA6D700ACDA98 /* FavoriteButton.swift */; };
+		915306B62A94B6CF007F16D7 /* ExampleBiometricAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915306B52A94B6CF007F16D7 /* ExampleBiometricAuth.swift */; };
 		9194FB512A8E45AE003F58A8 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 9194FB502A8E45AE003F58A8 /* SwiftyJSON */; };
 		9194FB542A8E45C4003F58A8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9194FB532A8E45C4003F58A8 /* Alamofire */; };
 		9194FB572A8F3AB5003F58A8 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 9194FB562A8F3AB5003F58A8 /* PopupView */; };
@@ -48,6 +49,7 @@
 		914D7CCA2A0CA2E900ACDA98 /* ApplicationStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationStates.swift; sourceTree = "<group>"; };
 		914D7CCC2A0CA3E600ACDA98 /* ExampleShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleShopView.swift; sourceTree = "<group>"; };
 		914D7CD42A0CA6D700ACDA98 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
+		915306B52A94B6CF007F16D7 /* ExampleBiometricAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleBiometricAuth.swift; sourceTree = "<group>"; };
 		9194FB592A8F3B06003F58A8 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		9194FB5B2A8F3BED003F58A8 /* ExamplePopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplePopupView.swift; sourceTree = "<group>"; };
 		9194FB5E2A8F3F33003F58A8 /* FloatsBig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatsBig.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				9194FB762A8F573A003F58A8 /* ExampleChatView.swift */,
 				9194FB792A8F5AA3003F58A8 /* ExampleRestClientView.swift */,
 				9194FB7B2A8F5C33003F58A8 /* ExampleCustomDisclosureGroupView.swift */,
+				915306B52A94B6CF007F16D7 /* ExampleBiometricAuth.swift */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				9194FB7A2A8F5AA3003F58A8 /* ExampleRestClientView.swift in Sources */,
 				9194FB7C2A8F5C33003F58A8 /* ExampleCustomDisclosureGroupView.swift in Sources */,
 				9194FB7E2A8F6858003F58A8 /* SearchBar.swift in Sources */,
+				915306B62A94B6CF007F16D7 /* ExampleBiometricAuth.swift in Sources */,
 				914D7CD52A0CA6D700ACDA98 /* FavoriteButton.swift in Sources */,
 				9194FB632A8F40CC003F58A8 /* PopupButton.swift in Sources */,
 				77A3BACF2A13332700BC2DFF /* CustomDisclosureGroup.swift in Sources */,

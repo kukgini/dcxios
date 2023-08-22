@@ -114,7 +114,7 @@ struct ExampleShopView: View {
     
     var body: some View {
         NavigationView {
-            List {
+            ZStack {
                 VStack {
                     HStack {
                         SearchBar(complition: { newNameFilter in
@@ -136,14 +136,19 @@ struct ExampleShopView: View {
                         ShopSortButton(label: "별점 높은순", option: $appStates.sortOption, key: .point)
                         ShopSortButton(label: "리뷰 많은순", option: $appStates.sortOption, key: .review)
                     }
+                    Spacer()
                 }
-                ForEach(Array(appStates.filteredShops.enumerated()), id: \.1.id) { (index, shop) in
-                    NavigationLink(destination: ShopDetailView(item: shop)) {
-                        ShopItemView(shop: shop)
-                            .background(index % 2 == 0 ? Color.white : Color.purple)
+                List {
+                    ForEach(Array(appStates.filteredShops.enumerated()), id: \.1.id) { (index, shop) in
+                        NavigationLink(destination: ShopDetailView(item: shop)) {
+                            ShopItemView(shop: shop)
+                                .background(index % 2 == 0 ? Color.white : Color.purple)
+                        }
                     }
+                    .onDelete(perform: deleteShop)
                 }
-                .onDelete(perform: deleteShop)
+                .offset(y: 90)
+                .listStyle(.plain)
             }
             .navigationBarTitle("View1")
             .navigationBarItems(
@@ -152,6 +157,7 @@ struct ExampleShopView: View {
         }
     }
     
+    @ViewBuilder
     func updateButton() -> some View {
         Button(action: {
             RestClient.get(

@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		77855EC92A16250100C5A043 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77855EC82A16250100C5A043 /* Shop.swift */; };
 		77A3BACF2A13332700BC2DFF /* CustomDisclosureGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3BACE2A13332700BC2DFF /* CustomDisclosureGroup.swift */; };
-		77A3BAD42A13347E00BC2DFF /* mockdata.json in Resources */ = {isa = PBXBuildFile; fileRef = 77A3BAD32A13347E00BC2DFF /* mockdata.json */; };
+		77A3BAD42A13347E00BC2DFF /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 77A3BAD32A13347E00BC2DFF /* data.json */; };
 		914D7CCB2A0CA2E900ACDA98 /* ApplicationStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914D7CCA2A0CA2E900ACDA98 /* ApplicationStates.swift */; };
 		914D7CCD2A0CA3E600ACDA98 /* ExampleShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914D7CCC2A0CA3E600ACDA98 /* ExampleShopView.swift */; };
 		914D7CD52A0CA6D700ACDA98 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914D7CD42A0CA6D700ACDA98 /* FavoriteButton.swift */; };
 		915306B62A94B6CF007F16D7 /* ExampleBiometricAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915306B52A94B6CF007F16D7 /* ExampleBiometricAuth.swift */; };
+		915306BE2A957B22007F16D7 /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915306BD2A957B22007F16D7 /* FileUtils.swift */; };
+		915306C02A957ED7007F16D7 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915306BF2A957ED7007F16D7 /* Data.swift */; };
 		9194FB512A8E45AE003F58A8 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 9194FB502A8E45AE003F58A8 /* SwiftyJSON */; };
 		9194FB542A8E45C4003F58A8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9194FB532A8E45C4003F58A8 /* Alamofire */; };
 		9194FB572A8F3AB5003F58A8 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 9194FB562A8F3AB5003F58A8 /* PopupView */; };
@@ -45,11 +47,13 @@
 /* Begin PBXFileReference section */
 		77855EC82A16250100C5A043 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		77A3BACE2A13332700BC2DFF /* CustomDisclosureGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDisclosureGroup.swift; sourceTree = "<group>"; };
-		77A3BAD32A13347E00BC2DFF /* mockdata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mockdata.json; sourceTree = "<group>"; };
+		77A3BAD32A13347E00BC2DFF /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		914D7CCA2A0CA2E900ACDA98 /* ApplicationStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationStates.swift; sourceTree = "<group>"; };
 		914D7CCC2A0CA3E600ACDA98 /* ExampleShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleShopView.swift; sourceTree = "<group>"; };
 		914D7CD42A0CA6D700ACDA98 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		915306B52A94B6CF007F16D7 /* ExampleBiometricAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleBiometricAuth.swift; sourceTree = "<group>"; };
+		915306BD2A957B22007F16D7 /* FileUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
+		915306BF2A957ED7007F16D7 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		9194FB592A8F3B06003F58A8 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		9194FB5B2A8F3BED003F58A8 /* ExamplePopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplePopupView.swift; sourceTree = "<group>"; };
 		9194FB5E2A8F3F33003F58A8 /* FloatsBig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatsBig.swift; sourceTree = "<group>"; };
@@ -94,7 +98,7 @@
 		77A3BAD22A13346400BC2DFF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				77A3BAD32A13347E00BC2DFF /* mockdata.json */,
+				77A3BAD32A13347E00BC2DFF /* data.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -135,6 +139,7 @@
 			children = (
 				9194FB592A8F3B06003F58A8 /* Color.swift */,
 				9194FB642A8F41C3003F58A8 /* View.swift */,
+				915306BF2A957ED7007F16D7 /* Data.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 			children = (
 				91E77FD42A0E1EBC0039AD1E /* RestClient.swift */,
 				9194FB682A8F425D003F58A8 /* RoundedCorner.swift */,
+				915306BD2A957B22007F16D7 /* FileUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -285,7 +291,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77A3BAD42A13347E00BC2DFF /* mockdata.json in Resources */,
+				77A3BAD42A13347E00BC2DFF /* data.json in Resources */,
 				91B958752A08BC7B00C7F75C /* Preview Assets.xcassets in Resources */,
 				91B958722A08BC7B00C7F75C /* Assets.xcassets in Resources */,
 			);
@@ -316,7 +322,9 @@
 				915306B62A94B6CF007F16D7 /* ExampleBiometricAuth.swift in Sources */,
 				914D7CD52A0CA6D700ACDA98 /* FavoriteButton.swift in Sources */,
 				9194FB632A8F40CC003F58A8 /* PopupButton.swift in Sources */,
+				915306C02A957ED7007F16D7 /* Data.swift in Sources */,
 				77A3BACF2A13332700BC2DFF /* CustomDisclosureGroup.swift in Sources */,
+				915306BE2A957B22007F16D7 /* FileUtils.swift in Sources */,
 				9194FB692A8F425D003F58A8 /* RoundedCorner.swift in Sources */,
 				914D7CCB2A0CA2E900ACDA98 /* ApplicationStates.swift in Sources */,
 				91E77FD52A0E1EBC0039AD1E /* RestClient.swift in Sources */,

@@ -16,9 +16,11 @@ public enum SortOption: String, Codable, Hashable {
 }
 
 final class ApplicationStates: ObservableObject {
-    public static let singleton = ApplicationStates(file: "mockdata.json")
+    static public let filename = "data.json"
     
-    @Published var allShops: [Shop]
+    static public let singleton = ApplicationStates()
+    
+    @Published var allShops: [Shop] = []
     @Published var dirty: Bool = false
     @Published var nameFilter: String = ""
     @Published var adFilter: Bool = false
@@ -55,8 +57,18 @@ final class ApplicationStates: ObservableObject {
         }
     }
     
-    public init(file: String) {
-        self.allShops = load(file)
+    public init() {
+        let filename = ApplicationStates.filename
+        
+        if FileUtils.ifExists(filename: filename) {
+            print("file exists.")
+            loadShops()
+        } else {
+            print("file not exists.")
+            self.allShops = load(filename)
+            print("save file")
+            saveShops()
+        }
     }
 
     var categories: [String: [Shop]] {
@@ -64,6 +76,39 @@ final class ApplicationStates: ObservableObject {
             grouping: allShops,
             by: { $0.category.rawValue }
         )
+    }
+    
+    func loadShops() {
+        let filename = ApplicationStates.filename
+        do {
+            let data = try FileUtils.loadData(filename: filename)
+            let json = JSON(data)
+            self.allShops = try decode(json.rawData())
+        } catch {
+            fatalError("Couldn't load \(filename). \(error.localizedDescription)")
+        }
+    }
+    
+    func saveShops() {
+        print("save shops")
+        let filename = ApplicationStates.filename
+        do {
+            try FileUtils.saveData(filename: filename, data: encode(self.allShops))
+        } catch {
+            fatalError("Couldn't save \(filename). \(error.localizedDescription)")
+        }
+    }
+    
+    func deleteShop(at index: IndexSet) {
+        let selectedIndex = index.first!
+        let selectedShop = filteredShops[selectedIndex]
+        let targetIndex = allShops.firstIndex(of: selectedShop)
+        allShops.remove(at: targetIndex!)
+        saveShops()
+        // you can use multiple selected items with this
+        // offsets.sorted(by: >).forEach { i in
+        //     //...
+        // }
     }
 }
 
@@ -93,5 +138,13 @@ func decode<T: Decodable>(_ data: Data) throws -> T {
     do {
         let decoder = JSONDecoder()
         return try decoder.decode(T.self, from: data)
+    }
+}
+
+func encode(_ data: Encodable) throws -> Data {
+    do {
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
+        return try encoder.encode(data)
     }
 }

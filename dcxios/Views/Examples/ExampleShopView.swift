@@ -145,7 +145,7 @@ struct ExampleShopView: View {
                                 .background(index % 2 == 0 ? Color.white : Color.purple)
                         }
                     }
-                    .onDelete(perform: deleteShop)
+                    .onDelete(perform: appStates.deleteShop)
                 }
                 .offset(y: 90)
                 .listStyle(.plain)
@@ -179,17 +179,5 @@ struct ExampleShopView: View {
         }) {
             Text("Update")
         }
-    }
-    
-    func deleteShop(at index: IndexSet) {
-        let selectedIndex = index.first!
-        let selectedShop = appStates.filteredShops[selectedIndex]
-        let targetIndex = appStates.allShops.firstIndex(of: selectedShop)
-        appStates.allShops.remove(at: targetIndex!)
-        
-        // you can use multiple selected items with this
-        // offsets.sorted(by: >).forEach { i in
-        //     //...
-        // }
     }
 }

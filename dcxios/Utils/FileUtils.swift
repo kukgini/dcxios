@@ -1,7 +1,7 @@
 import Foundation
 
 public struct FileUtils {
-    static func saveData(filename: String, data: Data) throws {
+    static func write(_ filename: String, data: Data) throws {
         guard let dirpath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
             throw ApplicationError.withMessage("unable to save file: \(filename)")
         }
@@ -10,7 +10,7 @@ public struct FileUtils {
         print("file save \(filepath.absoluteString)")
     }
     
-    static func loadData(filename: String) throws -> Data {
+    static func read(_ filename: String) throws -> Data {
         guard let dirpath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
             throw ApplicationError.withMessage("unable to load file: \(filename)")
         }
@@ -19,7 +19,7 @@ public struct FileUtils {
         return try Data(contentsOf: filepath.asURL())
     }
     
-    static func ifExists(filename: String) -> Bool {
+    static func exists(_ filename: String) -> Bool {
         guard let dirpath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
             return false
         }

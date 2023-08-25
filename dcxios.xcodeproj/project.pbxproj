@@ -13,9 +13,15 @@
 		914D7CCB2A0CA2E900ACDA98 /* ApplicationStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914D7CCA2A0CA2E900ACDA98 /* ApplicationStates.swift */; };
 		914D7CCD2A0CA3E600ACDA98 /* ExampleShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914D7CCC2A0CA3E600ACDA98 /* ExampleShopView.swift */; };
 		914D7CD52A0CA6D700ACDA98 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914D7CD42A0CA6D700ACDA98 /* FavoriteButton.swift */; };
+		91515E3D2A985EBA004FDDF6 /* Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91515E3C2A985EBA004FDDF6 /* Codable.swift */; };
 		915306B62A94B6CF007F16D7 /* ExampleBiometricAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915306B52A94B6CF007F16D7 /* ExampleBiometricAuth.swift */; };
 		915306BE2A957B22007F16D7 /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915306BD2A957B22007F16D7 /* FileUtils.swift */; };
 		915306C02A957ED7007F16D7 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915306BF2A957ED7007F16D7 /* Data.swift */; };
+		917291292A9D62D500DF17D8 /* ListViewTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917291282A9D62D500DF17D8 /* ListViewTemplate.swift */; };
+		9172912B2A9D630B00DF17D8 /* ListItemViewTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9172912A2A9D630B00DF17D8 /* ListItemViewTemplate.swift */; };
+		9172912D2A9D640B00DF17D8 /* SafeButtonTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9172912C2A9D640B00DF17D8 /* SafeButtonTemplate.swift */; };
+		9172912F2A9D652000DF17D8 /* ApplicationStatesTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9172912E2A9D652000DF17D8 /* ApplicationStatesTemplate.swift */; };
+		917291312A9D67F000DF17D8 /* ExampleShopStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917291302A9D67F000DF17D8 /* ExampleShopStates.swift */; };
 		9194FB512A8E45AE003F58A8 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 9194FB502A8E45AE003F58A8 /* SwiftyJSON */; };
 		9194FB542A8E45C4003F58A8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9194FB532A8E45C4003F58A8 /* Alamofire */; };
 		9194FB572A8F3AB5003F58A8 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 9194FB562A8F3AB5003F58A8 /* PopupView */; };
@@ -51,9 +57,15 @@
 		914D7CCA2A0CA2E900ACDA98 /* ApplicationStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationStates.swift; sourceTree = "<group>"; };
 		914D7CCC2A0CA3E600ACDA98 /* ExampleShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleShopView.swift; sourceTree = "<group>"; };
 		914D7CD42A0CA6D700ACDA98 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
+		91515E3C2A985EBA004FDDF6 /* Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codable.swift; sourceTree = "<group>"; };
 		915306B52A94B6CF007F16D7 /* ExampleBiometricAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleBiometricAuth.swift; sourceTree = "<group>"; };
 		915306BD2A957B22007F16D7 /* FileUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
 		915306BF2A957ED7007F16D7 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		917291282A9D62D500DF17D8 /* ListViewTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewTemplate.swift; sourceTree = "<group>"; };
+		9172912A2A9D630B00DF17D8 /* ListItemViewTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemViewTemplate.swift; sourceTree = "<group>"; };
+		9172912C2A9D640B00DF17D8 /* SafeButtonTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeButtonTemplate.swift; sourceTree = "<group>"; };
+		9172912E2A9D652000DF17D8 /* ApplicationStatesTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationStatesTemplate.swift; sourceTree = "<group>"; };
+		917291302A9D67F000DF17D8 /* ExampleShopStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleShopStates.swift; sourceTree = "<group>"; };
 		9194FB592A8F3B06003F58A8 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		9194FB5B2A8F3BED003F58A8 /* ExamplePopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplePopupView.swift; sourceTree = "<group>"; };
 		9194FB5E2A8F3F33003F58A8 /* FloatsBig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatsBig.swift; sourceTree = "<group>"; };
@@ -107,25 +119,15 @@
 			isa = PBXGroup;
 			children = (
 				91998EF82A11E88E003C09BE /* Components */,
-				914D7CD12A0CA68600ACDA98 /* Examples */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		914D7CC82A0CA2B600ACDA98 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				77855EC82A16250100C5A043 /* Shop.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		914D7CD12A0CA68600ACDA98 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
-				9194FB5D2A8F3EBC003F58A8 /* ExamplePopupStuffs */,
-				914D7CCC2A0CA3E600ACDA98 /* ExampleShopView.swift */,
-				9194FB5B2A8F3BED003F58A8 /* ExamplePopupView.swift */,
+				917291322A9D6ACC00DF17D8 /* ExampleShop */,
+				9194FB5D2A8F3EBC003F58A8 /* ExamplePopup */,
 				9194FB762A8F573A003F58A8 /* ExampleChatView.swift */,
 				9194FB792A8F5AA3003F58A8 /* ExampleRestClientView.swift */,
 				9194FB7B2A8F5C33003F58A8 /* ExampleCustomDisclosureGroupView.swift */,
@@ -134,19 +136,42 @@
 			path = Examples;
 			sourceTree = "<group>";
 		};
+		917291272A9D62B500DF17D8 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				917291282A9D62D500DF17D8 /* ListViewTemplate.swift */,
+				9172912A2A9D630B00DF17D8 /* ListItemViewTemplate.swift */,
+				9172912C2A9D640B00DF17D8 /* SafeButtonTemplate.swift */,
+				9172912E2A9D652000DF17D8 /* ApplicationStatesTemplate.swift */,
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
+		917291322A9D6ACC00DF17D8 /* ExampleShop */ = {
+			isa = PBXGroup;
+			children = (
+				77855EC82A16250100C5A043 /* Shop.swift */,
+				914D7CCC2A0CA3E600ACDA98 /* ExampleShopView.swift */,
+				917291302A9D67F000DF17D8 /* ExampleShopStates.swift */,
+			);
+			path = ExampleShop;
+			sourceTree = "<group>";
+		};
 		9194FB582A8F3ADE003F58A8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				9194FB592A8F3B06003F58A8 /* Color.swift */,
 				9194FB642A8F41C3003F58A8 /* View.swift */,
 				915306BF2A957ED7007F16D7 /* Data.swift */,
+				91515E3C2A985EBA004FDDF6 /* Codable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		9194FB5D2A8F3EBC003F58A8 /* ExamplePopupStuffs */ = {
+		9194FB5D2A8F3EBC003F58A8 /* ExamplePopup */ = {
 			isa = PBXGroup;
 			children = (
+				9194FB5B2A8F3BED003F58A8 /* ExamplePopupView.swift */,
 				9194FB5E2A8F3F33003F58A8 /* FloatsBig.swift */,
 				9194FB602A8F3F5D003F58A8 /* FloatsSmall.swift */,
 				9194FB6C2A8F4316003F58A8 /* Toasts.swift */,
@@ -156,7 +181,7 @@
 				9194FB622A8F40CC003F58A8 /* PopupButton.swift */,
 				9194FB722A8F442C003F58A8 /* Image.swift */,
 			);
-			path = ExamplePopupStuffs;
+			path = ExamplePopup;
 			sourceTree = "<group>";
 		};
 		91998EF82A11E88E003C09BE /* Components */ = {
@@ -196,9 +221,10 @@
 				9194FB6A2A8F42BD003F58A8 /* Constants.swift */,
 				77A3BAD22A13346400BC2DFF /* Resources */,
 				914D7CC72A0CA2A400ACDA98 /* Views */,
-				914D7CC82A0CA2B600ACDA98 /* Models */,
+				917291272A9D62B500DF17D8 /* Templates */,
 				91E77FD62A0E22290039AD1E /* Utils */,
 				9194FB582A8F3ADE003F58A8 /* Extensions */,
+				914D7CD12A0CA68600ACDA98 /* Examples */,
 				91B958712A08BC7B00C7F75C /* Assets.xcassets */,
 				91B958732A08BC7B00C7F75C /* Preview Content */,
 			);
@@ -312,24 +338,30 @@
 				9194FB752A8F445F003F58A8 /* ActionSheets.swift in Sources */,
 				9194FB5C2A8F3BED003F58A8 /* ExamplePopupView.swift in Sources */,
 				9194FB612A8F3F5D003F58A8 /* FloatsSmall.swift in Sources */,
+				91515E3D2A985EBA004FDDF6 /* Codable.swift in Sources */,
 				77855EC92A16250100C5A043 /* Shop.swift in Sources */,
 				9194FB712A8F43F9003F58A8 /* PopupsList.swift in Sources */,
 				9194FB732A8F442C003F58A8 /* Image.swift in Sources */,
 				9194FB5A2A8F3B06003F58A8 /* Color.swift in Sources */,
 				9194FB7A2A8F5AA3003F58A8 /* ExampleRestClientView.swift in Sources */,
+				9172912F2A9D652000DF17D8 /* ApplicationStatesTemplate.swift in Sources */,
 				9194FB7C2A8F5C33003F58A8 /* ExampleCustomDisclosureGroupView.swift in Sources */,
 				9194FB7E2A8F6858003F58A8 /* SearchBar.swift in Sources */,
 				915306B62A94B6CF007F16D7 /* ExampleBiometricAuth.swift in Sources */,
 				914D7CD52A0CA6D700ACDA98 /* FavoriteButton.swift in Sources */,
 				9194FB632A8F40CC003F58A8 /* PopupButton.swift in Sources */,
 				915306C02A957ED7007F16D7 /* Data.swift in Sources */,
+				917291292A9D62D500DF17D8 /* ListViewTemplate.swift in Sources */,
 				77A3BACF2A13332700BC2DFF /* CustomDisclosureGroup.swift in Sources */,
 				915306BE2A957B22007F16D7 /* FileUtils.swift in Sources */,
+				9172912B2A9D630B00DF17D8 /* ListItemViewTemplate.swift in Sources */,
 				9194FB692A8F425D003F58A8 /* RoundedCorner.swift in Sources */,
 				914D7CCB2A0CA2E900ACDA98 /* ApplicationStates.swift in Sources */,
 				91E77FD52A0E1EBC0039AD1E /* RestClient.swift in Sources */,
 				9194FB5F2A8F3F33003F58A8 /* FloatsBig.swift in Sources */,
 				914D7CCD2A0CA3E600ACDA98 /* ExampleShopView.swift in Sources */,
+				9172912D2A9D640B00DF17D8 /* SafeButtonTemplate.swift in Sources */,
+				917291312A9D67F000DF17D8 /* ExampleShopStates.swift in Sources */,
 				9194FB6D2A8F4316003F58A8 /* Toasts.swift in Sources */,
 				9194FB6B2A8F42BD003F58A8 /* Constants.swift in Sources */,
 				9194FB772A8F573A003F58A8 /* ExampleChatView.swift in Sources */,

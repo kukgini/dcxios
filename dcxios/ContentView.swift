@@ -4,18 +4,11 @@ struct ContentView: View {
     @EnvironmentObject var appStates: ApplicationStates
     
     var body: some View {
-        ExampleShopView()
+        ExampleShopView().environmentObject(ExampleShopStates.singleton)
 //        ExampleChatView()
 //        ExamplePopupView()
 //        ExampleRestClientView()
 //        ExampleCustomDisclosureGroupView(isExpanded: true)
 //        ExampleBiometricAuth()
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-            .environmentObject(ApplicationStates.singleton)
     }
 }

@@ -3,7 +3,7 @@ import Foundation
 
 public struct Shop: Codable, Equatable, Identifiable {
     public var id: Int
-    public var category: Category
+    public var category: ShopFilterCategory
     public var name: String
     public var point: Double
     public var review: Int

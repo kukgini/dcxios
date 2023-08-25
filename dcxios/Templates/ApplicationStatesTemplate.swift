@@ -2,17 +2,17 @@ import Foundation
 import Combine
 import SwiftyJSON
 
-public enum CategoryFilter: String, Codable, Hashable {
+public enum CategoryFilterTemplate: String, Codable, Hashable {
     case category1 = "category1"
     case category2 = "category2"
 }
 
-public enum SortOption: String, Codable, Hashable {
+public enum SortOptionTemplate: String, Codable, Hashable {
     case option1 = "option1"
     case option2 = "option2"
 }
 
-final class ApplicationStates: ObservableObject {
+final class ApplicationStatesTemplate: ObservableObject {
     static public let singleton = ApplicationStates()
     
     @Published var allItems: [JSON] = []

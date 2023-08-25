@@ -2,8 +2,8 @@ import SwiftUI
 
 struct ShopCategoryFilterButton: View {
     var label: String
-    @Binding var filter: Category?
-    var category: Category?
+    @Binding var filter: ShopFilterCategory?
+    var category: ShopFilterCategory?
     
     var body: some View {
         Button(action: {
@@ -12,23 +12,14 @@ struct ShopCategoryFilterButton: View {
         }) {
             Text(label)
         }
-        // [Important] buttonStyle needed for SwiftUI bug:
-        // https://stackoverflow.com/questions/63087817/strange-buttons-behaviour-in-a-list-swiftui
-         .buttonStyle(BorderlessButtonStyle())
-//         .padding(10)
-//         .overlay(
-//             RoundedRectangle(cornerRadius: 10)
-//                 .stroke(lineWidth: 0)
-//                 .foregroundColor(Color.blue)
-//         )
-//        .font(.system(size: 13))
+        .buttonStyle(BorderlessButtonStyle())
     }
 }
 
 struct ShopSortButton: View {
     var label: String
-    @Binding var option: SortOption
-    var key: SortOption
+    @Binding var option: ShopSortOption
+    var key: ShopSortOption
     
     var body: some View {
         Button(action: {
@@ -37,16 +28,7 @@ struct ShopSortButton: View {
         }) {
             Text(label)
         }
-        // [Important] buttonStyle needed for SwiftUI bug:
-        // https://stackoverflow.com/questions/63087817/strange-buttons-behaviour-in-a-list-swiftui
         .buttonStyle(BorderlessButtonStyle())
-//        .padding(10)
-//        .overlay(
-//            RoundedRectangle(cornerRadius: 10)
-//                .stroke(lineWidth: 0)
-//                .foregroundColor(Color.blue)
-//        )
-//        .font(.system(size: 13))
     }
 }
 
@@ -110,7 +92,7 @@ struct ShopDetailView: View {
 }
 
 struct ExampleShopView: View {
-    @EnvironmentObject var appStates: ApplicationStates
+    @EnvironmentObject var appStates: ExampleShopStates
     
     var body: some View {
         NavigationView {
@@ -167,7 +149,7 @@ struct ExampleShopView: View {
                     case .success(let json):
                         do {
                             print(json["shopList"])
-                            appStates.allShops = try decode(json["shopList"].rawData())
+                            appStates.allShops = try json["shopList"].rawData().decode()
                             appStates.dirty = true
                         } catch {
                             print("GET shopList failed. \(error)")
